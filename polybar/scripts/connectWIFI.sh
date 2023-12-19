@@ -1,0 +1,1 @@
+lxterminal -e bash -c "~/.config/polybar/scripts/nmcliDEV.sh"

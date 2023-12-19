@@ -1,0 +1,4 @@
+polybar -r main & polybar -r secondary &
+picom &
+nitrogen --restore
+chmod a+w /sys/class/backlight/intel_backlight/brightness

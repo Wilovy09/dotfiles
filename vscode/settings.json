@@ -1,0 +1,102 @@
+{
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.tabSize": 4,
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "diffEditor.wordWrap": "on",
+    "workbench.iconTheme": "catppuccin-perfect-latte",
+    "workbench.colorTheme": "Omni",
+    "workbench.editor.showTabs": "single",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.formatOnSave": true,
+    "editor.matchBrackets": "never",
+    "breadcrumbs.enabled": false,
+    "editor.glyphMargin": false,
+    "explorer.confirmDelete": false,
+    "editor.inlineSuggest.enabled": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "excalidraw.theme": "dark",
+    "rapidapi.terminalLink.enabled": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "workbench.activityBar.location": "side",
+    "inlineChat.showGutterIcon": "always",
+    "terminal.integrated.env.linux": {},
+    "console-ninja.featureSet": "Community",
+    "git.confirmSync": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.explorerKind": "external",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "vue": true
+    },
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontSize": 16,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "svelte.enable-ts-plugin": true,
+    "workbench.editorAssociations": {
+        "*.db": "sqlite-viewer.option"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.productIconTheme": "fluent-icons",
+    "material-icon-theme.folders.color": "#27bb81",
+    "explorer.fileNesting.enabled": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "explorer.fileNesting.expand": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "sh (2)": {
+            "path": "/usr/bin/sh"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+lxterminal -e bash -c "yay -Syu && sudo pacman -Syu"
