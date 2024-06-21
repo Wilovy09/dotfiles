@@ -23,34 +23,22 @@ Este es mi intento de dotfiles.
 
 ```txt
 📁dotfiles
-├──📁HyprV
-│  ├──📁backgrounds
-│  ├──📁hypr
-│  ├──📄hyprv.conf
-│  ├──📄hyprv_util
-│  ├──📁kitty
-│  ├──📁mako
-│  ├──📁swaylock
-│  ├──📁waybar
-│  ├──📁wlogout
-│  └──📁wofi
 ├──📄README.md
 ├──📁helix
 │  ├──📄config.toml
 │  ├──📄ignore
 │  ├──📄languages.toml
 │  └──📁themes
-├──📁hypr
-│  ├──📄env_var.conf
-│  ├──📄env_var_nvidia.conf
-│  ├──📄hyprland.conf
-│  ├──📄media-binds.conf
-│  ├──📄rog-g15-strix-2021-binds.conf
-│  ├──📁scripts
-│  └──📄xdg-portal-hyprland
+├──📁kitty
+│  ├──📄kitty.conf
+│  └──📁themes
 ├──📁superfile
 │  ├──📄config.toml
 │  ├──📄hotkeys.toml
 │  └──📁theme
-└──📄updateDotfiles.bash  
+├──📄updateDotfiles.bash
+└──📁waybar
+   ├──📁conf
+   ├──📁scripts
+   └──📁style 
 ```

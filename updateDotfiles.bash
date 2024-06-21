@@ -10,20 +10,20 @@ else
   echo "Helix no se pudo copiar"
 fi
 
-HyprV="/home/wilovy/.config/HyprV"
-if [ -d "$HyprV" ]; then
-  cp -r "$HyprV" "$destino"
-  echo "HyprV copiado"
+kitty="/home/wilovy/.config/HyprV/kitty"
+if [ -d "$kitty" ]; then
+  cp -r "$kitty" "$destino"
+  echo "Kitty copiado"
 else
-  echo "No se pudo copiar HyprV"
+  echo "No se pudo copiar Kitty"
 fi
 
-hypr="/home/wilovy/.config/hypr"
-if [ -d "$hypr" ]; then
-  cp -r "$hypr" "$destino"
-  echo "HyprV copiado"
+waybar="/home/wilovy/.config/HyprV/waybar"
+if [ -d "$waybar" ]; then
+  cp -r "$waybar" "$destino"
+  echo "waypbar copiado"
 else
-  echo "No se pudo copiar hypr"
+  echo "No se pudo copiar waybar"
 fi
 
 superfile="/home/wilovy/.config/superfile"
