@@ -1,0 +1,59 @@
+theme = "wilovy"
+
+[editor]
+line-number = "relative"
+mouse = true
+bufferline = "always"
+color-modes = true
+scroll-lines = 5
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spinner", "spacer", "version-control"]
+center = ["file-name"]
+right = ["diagnostics", "file-type", "position"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+max-indent-retain = 0
+wrap-indicator = ""
+
+[keys.insert]
+"C-space" = "completion"
+
+[keys.normal]
+C-s = ":write!"
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-v = [":vsplit", ":new"]
+S-q = ":quit"
+A-tab = ":buffer-next"
+S-tab = ":buffer-previous"
+
+# File picker NOT WORK
+C-f = [":new", ":insert-output lf -selection-path=/tmp/selected_file", ":buffer-close!", ":redraw", ":new",':insert-output "$(cat /tmp/selected_file)"']
+
+[keys.normal.esc]
+r = ":config-reload"
+o = ":config-open"
+l = ":o ~/.config/helix/languages.toml"
+q = ":bc"
+a = ":bco"

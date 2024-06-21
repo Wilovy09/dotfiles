@@ -1,0 +1,78 @@
+# https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
+
+# sudo npm i -g @vue/language-server
+[[language]]
+name = "vue"
+auto-format = true
+language-servers = ["vue-language-server", "emmet-lsp", "typescript-language-server", "vscode-html-language-server", "vscode-css-language-server"]
+
+[[language-server.typescript-language-server.config.plugins]]
+name = "@vue/typescript-plugin"
+location = "/home/wilovy/.nvm/versions/node/v20.14.0/lib/node_modules/@vue/language-server"
+languages = ["vue"]
+
+# sudo npm i -g @astrojs/language-server
+[language-server.astro-ls]
+command = "astro-ls"
+args = ["--stdio"]
+config = {typescript = {tsdk = "/home/wilovy/.nvm/versions/node/v20.14.0/lib/node_modules/typescript/lib"}, environment = "node"}
+
+[[language]]
+name = "astro"
+auto-format = true
+language-servers = [ "emmet-lsp", "astro-ls", "typescript-language-server"]
+
+[[language]] # brew install marksman
+name = "markdown"
+language-servers = [ "marksman" ]
+# --------------------------------------------
+
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp", "vscode-html-language-server"]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server"]
+
+[languages.javascript]
+language-server = { command = "typescript-language-server", args = "--stdio" }
+
+[languages.typescript]
+language-server = [
+  { command = "typescript-language-server", args = "--stdio" }
+]
+
+[[language]]
+name = "jsx"
+language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server" ]
+
+[[language]]
+name = "tsx"
+language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server" ]
+
+[languages.json]
+language-server = { command = "json-languageserver", args = ["--stdio"] }
+
+[languages.go]
+language-server = { command = "gopls" }
+formatter = { command = "goimports" }
+
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-server = { command = "rust-analyzer" }
+indent = { tab-width = 4, unit = "    " }
