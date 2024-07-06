@@ -1,0 +1,53 @@
+{ lib, pkgs, ... }:
+{
+  # {
+  #   name = "";
+  #   publisher = "";
+  #   version = "";
+  #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
+  # }
+
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; [
+    (vscode-with-extensions.override {
+      vscodeExtensions = [
+        vscode-extensions.github.copilot-chat
+        vscode-extensions.esbenp.prettier-vscode
+        vscode-extensions.bradlc.vscode-tailwindcss
+        vscode-extensions.usernamehw.errorlens
+        vscode-extensions.dbaeumer.vscode-eslint
+      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          name = "theme-omni";
+          publisher = "rocketseat";
+          version = "1.0.12";
+          sha256 = "sha256-rZzyMc9iCVjEFmWCiLuKqohBwSbqoKEYRR2Bn5f6dbU=";
+        }
+        {
+          name = "catppuccin-vsc-icons";
+          publisher = "Catppuccin";
+          version = "1.13.0";
+          sha256 = "sha256-4gsblUMcN7a7UgoklBjc+2uiaSERq1vmi0exLht+Xi0=";
+        }
+        {
+          name = "adonis-vscode-extension";
+          publisher = "jripouteau";
+          version = "1.3.1";
+          sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
+        }
+        {
+          name = "vscode-edge";
+          publisher = "AdonisJS";
+          version = "1.5.0";
+          sha256 = "sha256-B/dmb2HyeoKLxZv383TspEgLlGuUC52PHKiFyIKBrlc=";
+        }
+        {
+          name = "japa-vscode";
+          publisher = "jripouteau";
+          version = "2.1.3";
+          sha256 = "sha256-rvs1cxvX1M5iOUOebm36o8UNx9vUYOt8JVA+A5v3frU=";
+        }
+      ];
+    })
+  ];
+}
