@@ -1,6 +1,7 @@
 # Mis dotfiles
 
 - [NixOS](https://nixos.org/) es mi OS.
+- [Hyprland](https://hyprland.org/) es mi escritorio.
 - [Helix](https://helix-editor.com/) es mi editor principal.
   - [VSCode](https://code.visualstudio.com/) es mi editor secundario.
 - [xplr](https://xplr.dev/) es mi explorador de archivos.
@@ -30,6 +31,7 @@ Estos dotfiles son de un novato con NixOS.
 │  │  └──📄fontsConfig.nix
 │  ├──📁helix
 │  │  ├──📄helixConfig.nix
+│  │  ├──📄languages.toml
 │  │  └──📄theme.nix
 │  ├──📁kitty
 │  │  └──📄kittyConfig.nix
@@ -40,6 +42,13 @@ Estos dotfiles son de un novato con NixOS.
 │  └──📁zsh
 │     └──📄zshConfig.nix
 ├──📄suzume_door.jpg
-└──📄updateDotFile
+└──📄updateDotFile.py
 ```
- 
+
+## Migrando configuraciones
+
+* [ ] Hyprland.
+* [ ] Waybar.
+* [ ] Wofi.
+* [ ] Wlogout.
+
