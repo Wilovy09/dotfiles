@@ -10,7 +10,7 @@
     settings = {
       add_newline = false;
       format = ''
-        ($nodejs)($golang)($rust)($python) ($git_branch) ($git_status)$line_break$directory$character
+        ($nodejs)($golang)($rust)($python) ($git_branch) ($git_status)($line_break)$directory$character
       '';
       # os = {
       #   format = "[$symbol]($style)";

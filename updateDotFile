@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cp ~/.config/helix/languages.toml ./nixosModules/helix
+
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 
 commit_message="Commit realizado el $current_time"
