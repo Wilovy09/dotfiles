@@ -2,6 +2,7 @@
 {
   imports = [
     ./nixosModules/helix/helixConfig.nix
+    ./nixosModules/kitty/kittyConfig.nix
   ];
 
   home.username = "wilovy";

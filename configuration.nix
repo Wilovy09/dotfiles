@@ -87,7 +87,6 @@
     nixpkgs-fmt
     wofi
     wget
-    kitty
     cmake
     git
     gh
