@@ -47,7 +47,8 @@
           "tag" = pink;
           "attribute" = green;
 
-          "ui.background" = { bg = bg; fg = fg; };
+          # Yo lo desactivo porque me gusta más como se ve en fondo negro y transparente con la config de hyprland
+          # "ui.background" = { bg = bg; fg = fg; };
           "ui.linenr" = { fg = comment; modifiers = [ "bold" "italic" ]; };
           "ui.linenr.selected" = fg;
           "ui.cursor" = { fg = fg; bg = comment; };

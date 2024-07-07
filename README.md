@@ -30,6 +30,7 @@ Estos dotfiles son de un novato con NixOS.
 │  ├──📁fonts
 │  │  └──📄fontsConfig.nix
 │  ├──📁helix
+│  │  ├──📄base.toml
 │  │  ├──📄helixConfig.nix
 │  │  ├──📄languages.toml
 │  │  └──📄theme.nix

@@ -34,5 +34,6 @@ replace_txt_block(file_path, new_content)
 subprocess.run(['cp', '/home/wilovy/.config/helix/languages.toml', './nixosModules/helix'], check=True)
 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 commit_message = f"Commit realizado el {current_time}"
+subprocess.run(['git', 'add', '.'], check=True)
 subprocess.run(['git', 'commit', '-m', commit_message], check=True)
 subprocess.run(['git', 'push', 'origin', 'master'], check=True)
