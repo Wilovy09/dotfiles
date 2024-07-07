@@ -5,8 +5,8 @@
 - [Helix](https://helix-editor.com/) es mi editor principal.
   - [VSCode](https://code.visualstudio.com/) es mi editor secundario.
 - [xplr](https://xplr.dev/) es mi explorador de archivos.
-  - [thunar](https://docs.xfce.org/xfce/thunar/start) es mi explorador secundario.
-- [ZSH](https://www.zsh.org/) es mi shell.
+  - [Cosmis files](https://github.com/pop-os/cosmic-files) es mi explorador secundario.
+- [ZSH](https://www.zsh.org/) es mi shell con [oh-my-zsh](https://ohmyz.sh/).
 - [Kitty](https://sw.kovidgoyal.net/kitty/) es mi terminal.
 - [Starship](https://starship.rs/) es mi prompt.
 
