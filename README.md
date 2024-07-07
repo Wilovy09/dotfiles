@@ -26,7 +26,6 @@ Estos dotfiles son de un novato con NixOS.
 │  ├──📁boot
 │  │  ├──📄bootConfig.nix
 │  │  └──📁hyprgrub
-│  ├──📄desktopApps.nix
 │  ├──📁fonts
 │  │  └──📄fontsConfig.nix
 │  ├──📁helix
