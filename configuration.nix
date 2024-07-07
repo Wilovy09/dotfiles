@@ -99,8 +99,7 @@
     spotify
     go
     fnm
-    xfce.thunar
-    xfce.thunar-volman
+    cosmic-files
     gvfs
     fzf
     rustup

@@ -1,9 +1,6 @@
 [language-server.tailwindcss-ls]
 config = { userLanguages = { vue = "html", "*.vue" = "html", astro = "html", "*.astro" = "html", "edge" = "html", "*.edge" = "html" } }
 
-[langauge-server.html]
-config = { edge = "html", "*.edge" = "html" }
-
 [[language]]
 name = "vue"
 auto-format = true
@@ -33,6 +30,7 @@ args = ["--stdio"]
 [[language]]
 name = "html"
 roots = [".git"]
+file-types = ["html", "edge"]
 language-servers = ["emmet-lsp", "vscode-html-language-server"]
 
 [languages.typescript]

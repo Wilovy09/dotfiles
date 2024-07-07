@@ -3,6 +3,11 @@
   imports = [
     ./theme.nix
   ];
+
+  home.packages = with pkgs; [
+    cowsay
+  ];
+
   programs.helix.enable = true;
   programs.helix = {
     # Ignores
