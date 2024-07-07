@@ -1,12 +1,5 @@
 { lib, pkgs, ... }:
 {
-  # {
-  #   name = "";
-  #   publisher = "";
-  #   version = "";
-  #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
-  # }
-
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     (vscode-with-extensions.override {
@@ -47,6 +40,30 @@
           version = "2.1.3";
           sha256 = "sha256-rvs1cxvX1M5iOUOebm36o8UNx9vUYOt8JVA+A5v3frU=";
         }
+        {
+          name = "color-highlight";
+          publisher = "naumovs";
+          version = "2.8.0";
+          sha256 = "sha256-mT2P1lEdW66YkDRN6fi0rmmvvyBfXiJjAUHns8a8ipE=";
+        }
+        {
+          name = "auto-rename-tag";
+          publisher = "formulahendry";
+          version = "0.1.10";
+          sha256 = "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs=";
+        }
+        # {
+        #   name = "";
+        #   publisher = "";
+        #   version = "";
+        #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
+        # }
+        # {
+        #   name = "";
+        #   publisher = "";
+        #   version = "";
+        #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
+        # }
       ];
     })
   ];
