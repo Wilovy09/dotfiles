@@ -60,10 +60,9 @@
           "ui.statusline.normal" = { bg = comment; fg = fg; };
           "ui.statusline.insert" = { bg = pink; fg = fg; };
           "ui.statusline.select" = { bg = purple; fg = fg; };
-          # Lo mismo que arriba pasa aqui.
-          # "ui.bufferline" = { fg = comment; };
-          "ui.bufferline.background" = { bg = none; };
-          "ui.bufferline.active" = { fg = fg; };
+          "ui.bufferline" = { fg = bg_dark; };
+          "ui.bufferline.background" = { bg = comment; };
+          "ui.bufferline.active" = { fg = fg; modifiers = [ "bold" ]; };
           "ui.menu" = { bg = bg_dark; fg = fg; };
           "ui.menu.selected" = { bg = selection; fg = fg; };
           "ui.popup" = { bg = bg_dark; fg = fg; };
