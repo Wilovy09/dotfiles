@@ -10,14 +10,8 @@
     settings = {
       add_newline = false;
       format = ''
-        ($nodejs)($golang)($rust)($python) ($git_branch) ($git_status)($line_break)$directory$character
+        ($git_branch) ($git_status)$line_break($nodejs)($golang)($rust)($python)$directory$character
       '';
-      # os = {
-      #   format = "[$symbol]($style)";
-      #   symbols.NixOS = "  ";
-      #   style = "fg:#5376c3 bg:none";
-      #   disabled = false;
-      # };
       directory = {
         format = "[󰉋 ](fg:#D8A657 bg:none)[$path ](fg:#D8A657 bg:none)";
         truncation_length = 3;
@@ -25,9 +19,8 @@
       };
 
       git_branch = {
-        format = "[󰘬 ](fg:#FFFFFF bg:none)[$branch](fg:#FFFFFF bg:none)";
+        format = "[󰘬 ](fg:#FFFFFF bg:none)[$branch](fg:#988BC7 bg:none)(fg:#FFFFFF bg:none)";
       };
-
       git_status = {
         format = "[$all_status $ahead_behind]($style)";
         style = "fg:#F0F0F0 bg:none";
