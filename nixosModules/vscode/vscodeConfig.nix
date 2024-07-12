@@ -52,18 +52,24 @@
           version = "0.1.10";
           sha256 = "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs=";
         }
-        # {
-        #   name = "";
-        #   publisher = "";
-        #   version = "";
-        #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
-        # }
-        # {
-        #   name = "";
-        #   publisher = "";
-        #   version = "";
-        #   sha256 = "sha256-36bk5tmksMX7O8n6NiEPTPBxjfNVAd7I6uBLhQVDC9U=";
-        # }
+        {
+          name = "dancehelix";
+          publisher = "silverquark";
+          version = "0.5.16";
+          sha256 = "sha256-oHwtlbB18ctEnfStDOpJ+2/Kq41JZog8FVhTa1/s7m0=";
+        }
+        {
+          name = "gitlens";
+          publisher = "eamodio";
+          version = "2024.7.818";
+          sha256 = "sha256-m+Jda8UTTMITvzwHfOhsS3qskqWq/JwXZLTZsntUxx4=";
+        }
+        {
+          name = "copilot";
+          publisher = "Github";
+          version = "1.211.977";
+          sha256 = "sha256-5Ekqw3DY/lAUj0Kou4YYNwJUdCQDeX0UyH3pc/Tl4so=";
+        }
       ];
     })
   ];

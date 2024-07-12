@@ -37,6 +37,7 @@ language-servers = ["emmet-lsp", "vscode-html-language-server"]
 language-server = [
   { command = "typescript-language-server", args = "--stdio" }
 ]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [languages.javascript]
 language-server = { command = "typescript-language-server", args = "--stdio" }

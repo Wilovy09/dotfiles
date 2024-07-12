@@ -99,7 +99,7 @@
     spotify
     go
     fnm
-    cosmic-files
+    xfce.thunar
     gvfs
     fzf
     rustup
@@ -125,5 +125,6 @@
     (pkgs.python312.withPackages (python-pkgs: [
       python312Packages.python-lsp-server
     ]))
+    zed-editor
   ];
 }
