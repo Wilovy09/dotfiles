@@ -76,8 +76,9 @@
   system.stateVersion = "24.05";
 
   # Desktop
-  programs.hyprland.enable = true;
-  services.xserver.windowManager.leftwm.enable = true;
+  programs.hyprland = {
+    enable = true;
+  };
 
   programs.nix-ld.enable = true;
   programs.nix-ld.package = pkgs.nix-ld-rs;
@@ -126,6 +127,5 @@
     (pkgs.python312.withPackages (python-pkgs: [
       python312Packages.python-lsp-server
     ]))
-    zed-editor
   ];
 }
