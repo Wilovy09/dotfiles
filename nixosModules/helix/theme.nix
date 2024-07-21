@@ -66,6 +66,7 @@
           "ui.menu.selected" = { bg = selection; fg = fg; };
           "ui.popup" = { bg = bg_dark; fg = fg; };
           "ui.virtual.indent-guide" = { fg = comment; };
+          "ui.virtual.ruler" = { bg = comment; };
 
           "markup.bold" = { modifiers = [ "bold" ]; };
           "markup.heading" = { fg = cyan; modifiers = [ "bold" ]; };

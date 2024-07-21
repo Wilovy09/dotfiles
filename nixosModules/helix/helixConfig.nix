@@ -22,6 +22,7 @@
         color-modes = true;
         scroll-lines = 3;
         scrolloff = 0;
+        rulers = [ 80 ];
         gutters = [ "diff" "diagnostics" "line-numbers" "spacer" ];
         cursor-shape = {
           insert = "bar";

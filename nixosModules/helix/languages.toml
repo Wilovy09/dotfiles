@@ -1,5 +1,5 @@
 [language-server.tailwindcss-ls]
-config = { userLanguages = { vue = "html", "*.vue" = "html", astro = "html", "*.astro" = "html", "edge" = "html", "*.edge" = "html" } }
+config = { userLanguages = { vue = "html", "*.vue" = "html", astro = "html", "*.astro" = "html", "edge" = "html", "*.edge" = "html" }, tsx = "html", "*.tsx" = "html" }
 
 [[language]]
 name = "vue"
@@ -48,7 +48,9 @@ language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-lang
 
 [[language]]
 name = "tsx"
-language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server", "vscode-html-language-server" ]
+language-servers = [ "emmet-lsp", "tailwindcss-ls", "typescript-language-server", "vscode-css-language-server", "vscode-html-language-server" ]
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "tsx"] }
 
 [languages.json]
 language-server = { command = "json-languageserver", args = ["--stdio"] }
