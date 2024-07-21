@@ -48,7 +48,7 @@ language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-lang
 
 [[language]]
 name = "tsx"
-language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server" ]
+language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-language-server", "vscode-html-language-server" ]
 
 [languages.json]
 language-server = { command = "json-languageserver", args = ["--stdio"] }

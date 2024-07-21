@@ -127,5 +127,6 @@
     (pkgs.python312.withPackages (python-pkgs: [
       python312Packages.python-lsp-server
     ]))
+    telegram-desktop
   ];
 }
