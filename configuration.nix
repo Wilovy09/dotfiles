@@ -42,6 +42,8 @@
     };
   };
 
+  # virtualisation.docker.enable = true;
+
   services.printing.enable = true;
 
   hardware.pulseaudio.enable = true;
