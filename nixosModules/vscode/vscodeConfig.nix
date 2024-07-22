@@ -70,7 +70,14 @@
           version = "1.211.977";
           sha256 = "sha256-5Ekqw3DY/lAUj0Kou4YYNwJUdCQDeX0UyH3pc/Tl4so=";
         }
+        {
+          name = "vs-code-prettier-eslint";
+          publisher = "rvest";
+          version = "6.0.0";
+          sha256 = "sha256-PogNeKhIlcGxUKrW5gHvFhNluUelWDGHCdg5K+xGXJY=";
+        }
       ];
     })
   ];
 }
+
