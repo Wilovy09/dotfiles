@@ -128,5 +128,7 @@
       python312Packages.python-lsp-server
     ]))
     telegram-desktop
+    docker
+    lazydocker
   ];
 }
