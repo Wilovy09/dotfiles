@@ -42,8 +42,6 @@
     };
   };
 
-  # virtualisation.docker.enable = true;
-
   services.printing.enable = true;
 
   hardware.pulseaudio.enable = true;
@@ -130,7 +128,5 @@
       python312Packages.python-lsp-server
     ]))
     telegram-desktop
-    docker
-    lazydocker
   ];
 }
