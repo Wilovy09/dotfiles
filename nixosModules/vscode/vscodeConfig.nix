@@ -8,19 +8,13 @@
         vscode-extensions.esbenp.prettier-vscode
         vscode-extensions.bradlc.vscode-tailwindcss
         vscode-extensions.usernamehw.errorlens
-        vscode-extensions.dbaeumer.vscode-eslint
+        vscode-extensions.pkief.material-icon-theme
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "theme-omni";
           publisher = "rocketseat";
           version = "1.0.12";
           sha256 = "sha256-rZzyMc9iCVjEFmWCiLuKqohBwSbqoKEYRR2Bn5f6dbU=";
-        }
-        {
-          name = "catppuccin-vsc-icons";
-          publisher = "Catppuccin";
-          version = "1.13.0";
-          sha256 = "sha256-4gsblUMcN7a7UgoklBjc+2uiaSERq1vmi0exLht+Xi0=";
         }
         {
           name = "adonis-vscode-extension";
@@ -71,10 +65,16 @@
           sha256 = "sha256-5Ekqw3DY/lAUj0Kou4YYNwJUdCQDeX0UyH3pc/Tl4so=";
         }
         {
-          name = "vs-code-prettier-eslint";
-          publisher = "rvest";
-          version = "6.0.0";
-          sha256 = "sha256-PogNeKhIlcGxUKrW5gHvFhNluUelWDGHCdg5K+xGXJY=";
+          name = "edge";
+          publisher = "luongnd";
+          version = "0.3.2";
+          sha256 = "sha256-B9rY3tWYe4E1eY+ScWnkkzfmem4IwjyY7w9+q5q2StY=";
+        }
+        {
+          name = "volar";
+          publisher = "Vue";
+          version = "2.0.28";
+          sha256 = "sha256-f0nnmQemu6DxveQfJJrZGrj3dOTHhH1wYJGnNJlM6sU=";
         }
       ];
     })
