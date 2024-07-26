@@ -76,6 +76,18 @@
           version = "2.0.28";
           sha256 = "sha256-f0nnmQemu6DxveQfJJrZGrj3dOTHhH1wYJGnNJlM6sU=";
         }
+        {
+          name = "indenticator";
+          publisher = "SirTori";
+          version = "0.7.0";
+          sha256 = "sha256-J5iNO6V5US+GFyNjNNA5u9H2pKPozWKjQWcLAhl+BjY=";
+        }
+        {
+          name = "apc-extension";
+          publisher = "drcika";
+          version = "0.3.9";
+          sha256 = "sha256-VMUICGvAFWrG/uL3aGKNUIt1ARovc84TxkjgSkXuoME=";
+        }
       ];
     })
   ];
