@@ -49,7 +49,7 @@
   services.libinput.enable = true;
   users.users.wilovy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" "redis" ];
     shell = pkgs.zsh;
   };
 
@@ -93,6 +93,7 @@
     git
     gh
     lazygit
+    lazydocker
     xplr
     arandr
     waybar
@@ -128,6 +129,8 @@
       python312Packages.python-lsp-server
     ]))
     telegram-desktop
+    redis
+    lsof
   ];
 
   virtualisation.docker = {
@@ -138,5 +141,9 @@
       enable = true;
       setSocketVariable = true;
     };
+  };
+
+  services.redis.servers."talos" = {
+    enable = true;
   };
 }
