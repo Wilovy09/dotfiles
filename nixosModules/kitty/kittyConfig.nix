@@ -18,5 +18,8 @@
       background_opacity = "1";
       enabled_layouts = "*";
     };
+    extraConfig = ''
+      modify_font cell_height 125%
+    '';
   };
 }

@@ -77,6 +77,12 @@
           "q" = ":bc";
           "a" = ":bco";
         };
+        "+" = {
+          "r" = {
+            "r" = ":run-shell-command cargo run";
+            "b" = ":run-shell-command cargo build";
+          };
+        };
       };
     };
   };

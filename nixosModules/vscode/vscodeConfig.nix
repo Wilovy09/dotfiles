@@ -88,6 +88,12 @@
           version = "0.3.9";
           sha256 = "sha256-VMUICGvAFWrG/uL3aGKNUIt1ARovc84TxkjgSkXuoME=";
         }
+        {
+          name = "tailwind-color-matcher";
+          publisher = "OmriGrossman";
+          version = "1.0.8";
+          sha256 = "sha256-WfFg1h5tY43W9YqgXkHDlxjRquFupuvLBwotTw0XoNk=";
+        }
       ];
     })
   ];
