@@ -50,7 +50,7 @@ language-servers = [ "emmet-lsp", "typescript-language-server", "vscode-css-lang
 name = "tsx"
 language-servers = [ "emmet-lsp", "tailwindcss-ls", "typescript-language-server", "vscode-css-language-server", "vscode-html-language-server" ]
 auto-format = true
-formatter = { command = 'prettier', args = ["--parser", "tsx"] }
+formatter = { command = 'prettier', args = ["--parser", "react"] }
 
 [languages.json]
 language-server = { command = "json-languageserver", args = ["--stdio"] }

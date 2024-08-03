@@ -134,6 +134,7 @@
     lsof
   ];
 
+  /* DOCKER */
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
@@ -144,6 +145,8 @@
     };
   };
 
+  /* REDIS */
+  /* redis-server */
   services.redis.servers."talos" = {
     enable = true;
   };

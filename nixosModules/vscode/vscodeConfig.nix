@@ -83,16 +83,16 @@
           sha256 = "sha256-J5iNO6V5US+GFyNjNNA5u9H2pKPozWKjQWcLAhl+BjY=";
         }
         {
-          name = "apc-extension";
-          publisher = "drcika";
-          version = "0.3.9";
-          sha256 = "sha256-VMUICGvAFWrG/uL3aGKNUIt1ARovc84TxkjgSkXuoME=";
-        }
-        {
           name = "tailwind-color-matcher";
           publisher = "OmriGrossman";
           version = "1.0.8";
           sha256 = "sha256-WfFg1h5tY43W9YqgXkHDlxjRquFupuvLBwotTw0XoNk=";
+        }
+        {
+          name = "ionic";
+          publisher = "ionic";
+          version = "1.90.0";
+          sha256 = "sha256-592R3chnlnWmxIgBRGy3HvP1z87jOTqT5xkywAXRloY=";
         }
       ];
     })
