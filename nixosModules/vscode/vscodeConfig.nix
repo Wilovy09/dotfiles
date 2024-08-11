@@ -9,6 +9,8 @@
         vscode-extensions.bradlc.vscode-tailwindcss
         vscode-extensions.usernamehw.errorlens
         vscode-extensions.pkief.material-icon-theme
+        vscode-extensions.ms-python.python
+        vscode-extensions.batisteo.vscode-django
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "theme-omni";
