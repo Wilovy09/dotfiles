@@ -19,8 +19,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.wilovy = import ./home.nix;
             home-manager.backupFileExtension = "hm-backup";
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
           }
         ];
       };

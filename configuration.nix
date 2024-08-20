@@ -18,7 +18,6 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # environment.pathsToLink = [ "/run/current-system/sw" ];
   services.xserver = {
     enable = true;
     xkb.layout = "us";
@@ -65,7 +64,6 @@
       };
       extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
       ];
     };
   };
@@ -78,10 +76,8 @@
   system.stateVersion = "24.05";
 
   # Desktop
-  programs.hyprland = {
-    enable = true;
-  };
   services.xserver.windowManager.leftwm.enable = true;
+  services.xserver.windowManager.openbox.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.package = pkgs.nix-ld-rs;
@@ -90,7 +86,6 @@
   environment.systemPackages = with pkgs; [
     nil
     nixpkgs-fmt
-    wofi
     wget
     cmake
     git
@@ -111,14 +106,12 @@
     rustup
     gcc_multi
     fastfetch
-    swaybg
     grim
     swappy
     slurp
     dconf
     pavucontrol
     wlogout
-    swaylock-effects
     ripgrep
     xdg-utils
     psmisc
@@ -140,6 +133,8 @@
     feh
     picom
     obsidian
+
+    openbox
   ];
 
   /* DOCKER */
