@@ -40,6 +40,7 @@
         };
       };
     };
+    excludePackages = with pkgs; [ xterm ];
   };
 
   services.printing.enable = true;
@@ -80,6 +81,7 @@
   programs.hyprland = {
     enable = true;
   };
+  services.xserver.windowManager.leftwm.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.package = pkgs.nix-ld-rs;
@@ -113,7 +115,6 @@
     grim
     swappy
     slurp
-    yazi
     dconf
     pavucontrol
     wlogout
@@ -133,6 +134,12 @@
     redis
     lsof
     insomnia
+    polybar
+    rofi
+    flameshot
+    feh
+    picom
+    obsidian
   ];
 
   /* DOCKER */

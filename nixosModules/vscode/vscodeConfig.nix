@@ -11,6 +11,7 @@
         vscode-extensions.pkief.material-icon-theme
         vscode-extensions.ms-python.python
         vscode-extensions.batisteo.vscode-django
+        vscode-extensions.jdinhlife.gruvbox
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "theme-omni";
@@ -96,8 +97,33 @@
           version = "1.90.0";
           sha256 = "sha256-592R3chnlnWmxIgBRGy3HvP1z87jOTqT5xkywAXRloY=";
         }
+        {
+          name = "vscode-database-client2";
+          publisher = "cweijan";
+          version = "7.5.7";
+          sha256 = "sha256-Um6Vca8aG6aevUIMgEwJINi+UMhWHIzJC9Z33JXUa38=";
+        }
+        {
+          name = "sqlite-viewer";
+          publisher = "qwtel";
+          version = "0.6.4";
+          sha256 = "sha256-wDSWQ36j6zMUD43PqP+x9VRxgDJJexFpxMyuHpbCi2s=";
+        }
+        {
+          name = "live-server";
+          publisher = "ms-vscode";
+          version = "0.5.2024062701";
+          sha256 = "sha256-03UXPaoW7DpApaLFJyZRdTKfCDbXudglFC7Dwj4w8yo=";
+        }
+        {
+          name = "vsliveshare";
+          publisher = "MS-vsliveshare";
+          version = "1.0.5936";
+          sha256 = "sha256-7jbKo5i9Pe0FUHyFpiH5qDv5NOtJ+POlyzpg0/9IuVA=";
+        }
       ];
     })
   ];
 }
+
 
