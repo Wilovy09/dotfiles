@@ -23,24 +23,26 @@
     xkb.layout = "us";
     xkb.variant = "altgr-intl";
     xkb.options = "terminate:ctrl_alt_bksp";
-    displayManager = {
-      lightdm = {
-        enable = true;
-        background = ./suzume_door.jpg;
-        greeters = {
-          gtk = {
-            enable = true;
-            clock-format = "%a, %d %b %H:%M";
-            theme = {
-              package = pkgs.zuki-themes;
-              name = "Zukitre-dark";
-            };
+    displayManager.lightdm = {
+      enable = true;
+      background = ./suzume_door.jpg;
+      greeters = {
+        gtk = {
+          enable = true;
+          clock-format = "%a, %d %b %H:%M";
+          theme = {
+            package = pkgs.zuki-themes;
+            name = "Zukitre-dark";
           };
         };
       };
     };
     excludePackages = with pkgs; [ xterm ];
   };
+
+  # Desktop
+  services.xserver.windowManager.leftwm.enable = true;
+  services.xserver.windowManager.openbox.enable = true;
 
   services.printing.enable = true;
 
@@ -53,31 +55,12 @@
     shell = pkgs.zsh;
   };
 
-  xdg = {
-    portal = {
-      enable = true;
-      xdgOpenUsePortal = false;
-      wlr.enable = true;
-      config = {
-        common.default = [ "gtk" ];
-        hyprland.default = [ "gtk" "hyprland" ];
-      };
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-      ];
-    };
-  };
-
   programs.nh = {
     enable = true;
     flake = "/etc/nixos";
   };
 
   system.stateVersion = "24.05";
-
-  # Desktop
-  services.xserver.windowManager.leftwm.enable = true;
-  services.xserver.windowManager.openbox.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.package = pkgs.nix-ld-rs;
@@ -106,12 +89,8 @@
     rustup
     gcc_multi
     fastfetch
-    grim
-    swappy
-    slurp
     dconf
     pavucontrol
-    wlogout
     ripgrep
     xdg-utils
     psmisc
@@ -133,7 +112,6 @@
     feh
     picom
     obsidian
-
     openbox
   ];
 
