@@ -49,6 +49,8 @@ Estos dotfiles son de un novato con NixOS.
 │  │  ├──📄modules.ini
 │  │  ├──📁scripts
 │  │  └──📄user_modules.ini
+│  ├──📁rofi
+│  │  └──📄config.rasi
 │  ├──📁starship
 │  │  └──📄starshipConfig.nix
 │  ├──📁vscode
