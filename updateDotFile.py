@@ -47,11 +47,11 @@ def copy_configs():
         elif os.path.isdir(full_path):
             shutil.copytree(full_path, f"{destination}/{os.path.basename(full_path)}", dirs_exist_ok=True)
 
+copy_configs()
+
 file_path = 'README.md'
 new_content = get_gols_output()
 replace_txt_block(file_path, new_content)
-
-copy_configs()
 
 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 commit_message = f"Commit realizado el {current_time}"

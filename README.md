@@ -35,6 +35,20 @@ Estos dotfiles son de un novato con NixOS.
 │  │  └──📄theme.nix
 │  ├──📁kitty
 │  │  └──📄kittyConfig.nix
+│  ├──📄languages.toml
+│  ├──📁openbox
+│  │  ├──📄autostart
+│  │  ├──📄menu.xml
+│  │  └──📄rc.xml
+│  ├──📁picom
+│  │  └──📄picom.conf
+│  ├──📁polybar
+│  │  ├──📄bars.ini
+│  │  ├──📄colors.ini
+│  │  ├──📄config.ini
+│  │  ├──📄modules.ini
+│  │  ├──📁scripts
+│  │  └──📄user_modules.ini
 │  ├──📁starship
 │  │  └──📄starshipConfig.nix
 │  ├──📁vscode
