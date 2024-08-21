@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+exec picom &
+exec polybar &
+exec feh --bg-scale ~/Backgrounds/4.jpg

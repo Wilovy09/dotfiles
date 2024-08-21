@@ -41,7 +41,6 @@
   };
 
   # Desktop
-  services.xserver.windowManager.leftwm.enable = true;
   services.xserver.windowManager.openbox.enable = true;
 
   services.printing.enable = true;
@@ -79,7 +78,6 @@
     arandr
     waybar
     brave
-    vesktop
     spotify
     go
     fnm
@@ -112,7 +110,12 @@
     feh
     picom
     obsidian
+    gnumake
+    gccgo14
     openbox
+    obconf
+    discord
+    eww
   ];
 
   /* DOCKER */
