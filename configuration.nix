@@ -42,6 +42,7 @@
 
   # Desktop
   services.xserver.windowManager.openbox.enable = true;
+  # services.xserver.windowManager.ragnarwm.enable = true;
 
   services.printing.enable = true;
 
@@ -112,6 +113,7 @@
     obsidian
     gnumake
     gccgo14
+    # ragnar-wm
     openbox
     obconf
     discord

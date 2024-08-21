@@ -35,7 +35,8 @@ def copy_configs():
         '~/.config/helix/languages.toml',
         '~/.config/picom',
         '~/.config/polybar',
-        '~/.config/openbox'
+        '~/.config/openbox',
+        '~/..config/rofi'
     ]
     destination = './nixosModules/'
     
