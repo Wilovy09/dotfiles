@@ -15,7 +15,7 @@
       url_color = "#0087bd";
       url_style = "dotted";
       confirm_os_window_close = "0";
-      background_opacity = "1";
+      background_opacity = "0.90";
       enabled_layouts = "*";
     };
     extraConfig = ''

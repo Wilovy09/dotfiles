@@ -113,11 +113,10 @@
     obsidian
     gnumake
     gccgo14
-    # ragnar-wm
     openbox
     obconf
     discord
-    eww
+    neovim
   ];
 
   /* DOCKER */
