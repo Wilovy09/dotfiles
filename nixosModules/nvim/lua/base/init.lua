@@ -1,5 +1,3 @@
-vim.cmd("colorscheme gruvbox")
-
 vim.g.mapleader = " "
 
 vim.wo.relativenumber = true
