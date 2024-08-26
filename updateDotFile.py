@@ -42,7 +42,6 @@ def copy_configs():
     destination = './nixosModules/'
     
     for config in configs:
-        # Expand '~' to the full path
         full_path = os.path.expanduser(config)
         if os.path.isfile(full_path):
             shutil.copy(full_path, f"{destination}/{os.path.basename(full_path)}")
