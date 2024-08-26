@@ -125,4 +125,6 @@ return {
 	require("configs.none-ls"),
 	-- CMP && LuaSnip
 	require("configs.completions"),
+  -- ToogleTerm
+  require('configs.toogleterm')
 }
