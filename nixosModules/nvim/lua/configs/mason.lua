@@ -6,10 +6,10 @@ return {
 		"rust-analyzer",
 		"rustfmt",
 		"prettier",
-		"aslint-lsp",
 		"typescript-language-server",
 		"vetur-vls",
 		"astro-language-server",
+		"eslint_d",
 	},
 
 	max_concurrent_installers = 10,

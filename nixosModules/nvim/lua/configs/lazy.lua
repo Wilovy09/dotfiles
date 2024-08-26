@@ -1,6 +1,6 @@
 return {
 	-- Theme
-	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true },
 	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
@@ -60,18 +60,19 @@ return {
 					"astro",
 				},
 				sync_install = false,
+				auto_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
 		end,
 	},
 	-- EdgeJS Template
-	{'watzon/vim-edge-template'},
+	{ "watzon/vim-edge-template" },
 	-- AutoPairs
 	{
-		'windwp/nvim-autopairs',
-  		event = "InsertEnter",
-  		config = true
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
 	},
 	-- Mason
 	{
@@ -103,19 +104,25 @@ return {
 	},
 	-- WichKey
 	{
-  		"folke/which-key.nvim",
-  		event = "VeryLazy",
-  		opts = { },
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {},
 	},
 	-- BarBar
 	{
-		'romgrk/barbar.nvim',
-    		init = function() vim.g.barbar_auto_setup = false end,
-		opts = { },
-  	},
-	-- Formatter 
-	{
-  		'stevearc/conform.nvim',
-  		opts = {},
+		"romgrk/barbar.nvim",
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+		opts = {},
 	},
+	-- Formatter
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
+	-- NoneLS
+	require("configs.none-ls"),
+	-- CMP && LuaSnip
+	require("configs.completions"),
 }
