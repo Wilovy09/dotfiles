@@ -36,7 +36,8 @@ def copy_configs():
         '~/.config/picom',
         '~/.config/polybar',
         '~/.config/openbox',
-        '~/.config/rofi'
+        '~/.config/rofi',
+        '~/.config/nvim'
     ]
     destination = './nixosModules/'
     

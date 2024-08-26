@@ -36,6 +36,11 @@ Estos dotfiles son de un novato con NixOS.
 │  ├──📁kitty
 │  │  └──📄kittyConfig.nix
 │  ├──📄languages.toml
+│  ├──📁nvim
+│  │  ├──📄init.lua
+│  │  ├──📄lazy-lock.json
+│  │  ├──📄lazyvim.json
+│  │  └──📁lua
 │  ├──📁openbox
 │  │  ├──📄autostart
 │  │  ├──📄menu.xml
