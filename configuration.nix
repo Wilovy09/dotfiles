@@ -117,6 +117,7 @@
     obconf
     discord
     neovim
+    unzip
   ];
 
   /* DOCKER */

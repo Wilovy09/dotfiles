@@ -44,26 +44,78 @@ return {
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
 				ensure_installed = {
-					"vim",
 					"lua",
-					"vimdoc",
 					"html",
 					"css",
 					"javascript",
 					"typescript",
 					"tsx",
-					"c",
 					"rust",
-					"svelte",
-					"cpp",
 					"python",
 					"yaml",
-					"zig",
+					"vue",
+					"go",
+					"gomod",
+					"gosum",
+					"astro",
 				},
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
 		end,
+	},
+	-- EdgeJS Template
+	{'watzon/vim-edge-template'},
+	-- AutoPairs
+	{
+		'windwp/nvim-autopairs',
+  		event = "InsertEnter",
+  		config = true
+	},
+	-- Mason
+	{
+		"williamboman/mason.nvim",
+		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate", "MasonUninstallAll" },
+		opts = function()
+			return require("configs.mason")
+		end,
+		config = function(_, opts)
+			require("mason").setup(opts)
+			vim.api.nvim_create_user_command("MasonInstallAll", function()
+				if opts.ensure_installed and #opts.ensure_installed > 0 then
+					vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
+				end
+			end, {})
+			vim.g.mason_binaries_list = opts.ensure_installed
+		end,
+	},
+	{ "williamboman/mason-lspconfig.nvim" },
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
+		},
+		config = function()
+			require("configs.lspconfig")
+		end,
+	},
+	-- WichKey
+	{
+  		"folke/which-key.nvim",
+  		event = "VeryLazy",
+  		opts = { },
+	},
+	-- BarBar
+	{
+		'romgrk/barbar.nvim',
+    		init = function() vim.g.barbar_auto_setup = false end,
+		opts = { },
+  	},
+	-- Formatter 
+	{
+  		'stevearc/conform.nvim',
+  		opts = {},
 	},
 }
