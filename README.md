@@ -15,6 +15,12 @@
 
 ![FastFetch](./public/img1.png)
 
+## Migrando configuraciones
+
+* [ ] Openbox.
+* [ ] Polybar.
+* [ ] Rofi.
+
 ## Estructura del repo
 
 Estos dotfiles son de un novato con NixOS.
@@ -80,8 +86,3 @@ Estos dotfiles son de un novato con NixOS.
 └──📄updateDotFile.py
 ```
 
-## Migrando configuraciones
-
-* [ ] Openbox.
-* [ ] Polybar.
-* [ ] Rofi.
