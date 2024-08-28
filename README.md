@@ -13,8 +13,6 @@
 
 ## Preview
 
-![Clean](./public/img2.png)
-
 ![FastFetch](./public/img1.png)
 
 ## Estructura del repo
