@@ -14,3 +14,4 @@ plugins = require("configs.lazy")
 
 require("lazy").setup(plugins)
 require("gruvbox").load()
+

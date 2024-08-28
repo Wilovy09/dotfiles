@@ -10,6 +10,7 @@ return {
 		"vetur-vls",
 		"astro-language-server",
 		"eslint_d",
+    "tailwindcss-language-server"
 	},
 
 	max_concurrent_installers = 10,
