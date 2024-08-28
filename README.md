@@ -87,4 +87,3 @@ Estos dotfiles son de un novato con NixOS.
 * [ ] Openbox.
 * [ ] Polybar.
 * [ ] Rofi.
-
