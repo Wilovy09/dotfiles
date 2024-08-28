@@ -45,6 +45,8 @@
   # services.xserver.windowManager.ragnarwm.enable = true;
 
   services.printing.enable = true;
+  # Detectar usb
+  services.udisks2.enable = true;
 
   hardware.pulseaudio.enable = true;
 
@@ -103,7 +105,6 @@
     ]))
     telegram-desktop
     redis
-    lsof
     insomnia
     polybar
     rofi
