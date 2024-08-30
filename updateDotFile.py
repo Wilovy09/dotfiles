@@ -1,7 +1,7 @@
+import os
+import shutil
 import subprocess
 import datetime
-import shutil
-import os
 
 def get_gols_output():
     result = subprocess.run(['bash', '-c', 'cd .. && ~/go/bin/GoLS --tree --emoji --depth 2 ./wilovy.nix'], 
@@ -11,12 +11,12 @@ def get_gols_output():
 def replace_txt_block(file_path, new_content):
     with open(file_path, 'r') as file:
         lines = file.readlines()
-    
-    inside_block = False
+
     new_lines = []
-    
+    inside_block = False
+
     for line in lines:
-        if line.strip() == '```txt':
+        if line.strip() == '```go' and not inside_block:
             inside_block = True
             new_lines.append(line)
             new_lines.append(new_content)
@@ -30,7 +30,6 @@ def replace_txt_block(file_path, new_content):
         file.writelines(new_lines)
 
 def copy_configs():
-    # List of config paths
     configs = [
         '~/.config/helix/languages.toml',
         '~/.config/picom',
@@ -56,9 +55,11 @@ def main():
     new_content = get_gols_output()
     replace_txt_block(file_path, new_content)
 
+    # Mostrar los cambios antes de hacer el commit
+    subprocess.run(['git', 'diff'])
+
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-    # Pedir el mensaje del commit
     commit_message = input(f"Introduce el título del commit (por defecto: 'Commit realizado el {current_time}'): ")
     if not commit_message:
         commit_message = f"Commit realizado el {current_time}"
