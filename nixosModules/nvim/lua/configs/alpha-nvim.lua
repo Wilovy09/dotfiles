@@ -21,7 +21,7 @@ return {
 			[[      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ]],
 			[[       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ]],
 		}
-    --
+
     -- stylua: ignore
     dashboard.config.layout = {
       { type = "padding", val = 1 }, dashboard.section.header,
