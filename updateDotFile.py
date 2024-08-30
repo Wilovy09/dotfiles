@@ -55,7 +55,6 @@ def main():
     new_content = get_gols_output()
     replace_txt_block(file_path, new_content)
 
-    # Mostrar los cambios antes de hacer el commit
     subprocess.run(['git', 'diff'])
 
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
