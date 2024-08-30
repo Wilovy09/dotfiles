@@ -6,14 +6,14 @@ configuration {
 }
 
 * {
-    bg0:  #00000050;
-    bg1:  #363636;
-    bg2:  #f5f5f520;
-    bg3:  #f5f5f540;
-    bg4:  #191622;
+    bg0:  #28282870;  /* Gruvbox background */
+    bg1:  #3c3836;  /* Gruvbox background lighter */
+    bg2:  #504945;  /* Gruvbox background light */
+    bg3:  #665c54;  /* Gruvbox background lighter */
+    bg4:  #7c6f64;  /* Gruvbox background lightest */
 
-    fg0:  #f5f5f5;
-    fg1:  #f5f5f580;
+    fg0:  #ebdbb2;  /* Gruvbox foreground light */
+    fg1:  #d5c4a1;  /* Gruvbox foreground lighter */
 
     background-color: transparent;
     text-color:       @fg0;
