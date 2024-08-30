@@ -58,7 +58,7 @@
       <weight>Bold</weight>
       <slant>Normal</slant>
     </font>
-    <name>Triste-Violet</name>
+    <name>gruvbox-dark-gtk</name>
   </theme>
   <desktops>
     <number>5</number>

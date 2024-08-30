@@ -120,6 +120,7 @@
     neovim
     unzip
     lazysql
+    lxappearance
   ];
 
   /* DOCKER */
