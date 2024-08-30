@@ -49,14 +49,24 @@ def copy_configs():
         elif os.path.isdir(full_path):
             shutil.copytree(full_path, f"{destination}/{os.path.basename(full_path)}", dirs_exist_ok=True)
 
-copy_configs()
+def main():
+    copy_configs()
 
-file_path = 'README.md'
-new_content = get_gols_output()
-replace_txt_block(file_path, new_content)
+    file_path = 'README.md'
+    new_content = get_gols_output()
+    replace_txt_block(file_path, new_content)
 
-current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-commit_message = f"Commit realizado el {current_time}"
-subprocess.run(['git', 'add', '.'], check=True)
-subprocess.run(['git', 'commit', '-m', commit_message], check=True)
-subprocess.run(['git', 'push', 'origin', 'master'], check=True)
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Pedir el mensaje del commit
+    commit_message = input(f"Introduce el título del commit (por defecto: 'Commit realizado el {current_time}'): ")
+    if not commit_message:
+        commit_message = f"Commit realizado el {current_time}"
+
+    subprocess.run(['git', 'add', '.'], check=True)
+    subprocess.run(['git', 'commit', '-m', commit_message], check=True)
+    subprocess.run(['git', 'push', 'origin', 'master'], check=True)
+
+if __name__ == "__main__":
+    main()
+
