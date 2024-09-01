@@ -38,7 +38,6 @@ def copy_configs():
         '~/.config/rofi',
         '~/.config/nvim',
         '~/.config/fastfetch',
-        '~/.themes'
     ]
     destination = './nixosModules/'
     

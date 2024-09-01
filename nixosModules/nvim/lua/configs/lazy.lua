@@ -159,4 +159,6 @@ return {
 			"rcarriga/nvim-notify",
 		},
 	},
+  -- Cord
+  require("configs.cord")
 }

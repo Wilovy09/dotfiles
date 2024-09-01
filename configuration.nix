@@ -117,11 +117,17 @@
     openbox
     obconf
     discord
-    neovim
     unzip
     lazysql
     lxappearance
+    lsof
+    xclip
   ];
+
+  /* VIM */
+  programs.neovim = {
+    enable = true;
+  };
 
   /* DOCKER */
   virtualisation.docker = {
