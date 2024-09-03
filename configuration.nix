@@ -8,14 +8,12 @@
       ./nixosModules/starship/starshipConfig.nix
       ./nixosModules/fonts/fontsConfig.nix
       ./nixosModules/boot/bootConfig.nix
+      ./nixosModules/sddm/sddmConfig.nix
     ];
 
   networking.hostName = "nixos";
-
   networking.networkmanager.enable = true;
-
   time.timeZone = "America/Monterrey";
-
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver = {
@@ -23,26 +21,11 @@
     xkb.layout = "us";
     xkb.variant = "altgr-intl";
     xkb.options = "terminate:ctrl_alt_bksp";
-    displayManager.lightdm = {
-      enable = true;
-      background = ./suzume_door.jpg;
-      greeters = {
-        gtk = {
-          enable = true;
-          clock-format = "%a, %d %b %H:%M";
-          theme = {
-            package = pkgs.zuki-themes;
-            name = "Zukitre-dark";
-          };
-        };
-      };
-    };
     excludePackages = with pkgs; [ xterm ];
   };
 
   # Desktop
   services.xserver.windowManager.openbox.enable = true;
-  # services.xserver.windowManager.ragnarwm.enable = true;
 
   services.printing.enable = true;
   # Detectar usb
@@ -79,7 +62,6 @@
     lazydocker
     xplr
     arandr
-    waybar
     brave
     spotify
     go

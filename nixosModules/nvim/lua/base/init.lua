@@ -13,4 +13,6 @@ vim.api.nvim_set_keymap("n", "<C-Esc>", ":q!<CR>", { noremap = true, silent = tr
 
 vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeFindFileToggle<CR>", { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap("n", "<S-f>", "zfa}", { noremap = true, silent = true })
+
 require("base.plugins.lazy")
