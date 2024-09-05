@@ -54,3 +54,15 @@ lspconfig.eslint.setup({
 lspconfig.tailwindcss.setup({
   capabilities = capabilities,
 })
+lspconfig.markdown_oxide.setup({
+  capabilities = capabilities,
+})
+lspconfig.emmet_language_server.setup({
+  capabilities = capabilities,
+})
+lspconfig.pyright.setup({
+  capabilities = capabilities,
+})
+-- lspconfig..setup({
+--   capabilities = capabilities,
+-- })
