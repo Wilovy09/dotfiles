@@ -160,5 +160,11 @@ return {
 		},
 	},
   -- Cord
-  require("configs.cord")
+  require("configs.cord"),
+  --Rustnvim
+  {
+  'mrcjkb/rustaceanvim',
+  version = '^5', -- Recommended
+  lazy = false, -- This plugin is already lazy
+},
 }

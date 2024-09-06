@@ -36,9 +36,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
 })
-lspconfig.rust_analyzer.setup({
-  capabilities = capabilities,
-})
+-- lspconfig.rust_analyzer.setup({
+--   capabilities = capabilities,
+-- })
 lspconfig.tsserver.setup({
   capabilities = capabilities,
 })
