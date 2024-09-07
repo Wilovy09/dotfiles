@@ -128,30 +128,38 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <!-- Send to desktop 1-5 -->
+    <keybind key="W-S-1">
       <action name="SendToDesktop">
-        <to>left</to>
+        <to>1</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-S-2">
       <action name="SendToDesktop">
-        <to>right</to>
+        <to>2</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="W-S-3">
       <action name="SendToDesktop">
-        <to>up</to>
+        <to>3</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="W-S-4">
       <action name="SendToDesktop">
-        <to>down</to>
+        <to>4</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="W-S-5">
+      <action name="SendToDesktop">
+        <to>5</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <!-- Go to desktop 1-5 -->
     <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
@@ -177,6 +185,7 @@
         <to>5</to>
       </action>
     </keybind>
+    <!-- Window actions -->
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -250,17 +259,18 @@
         <command>flameshot gui</command>
       </action>
     </keybind>
-    <keybind key="A-q">
+    <keybind key="A-w">
       <action name="Execute">
         <command>polybar </command>
       </action>
     </keybind>
-    <keybind key="A-w">
+    <keybind key="A-q">
       <action name="Execute">
         <command>pkill polybar</command>
       </action>
     </keybind>
   </keyboard>
+  <!-- Mouse clicks/events -->
   <mouse>
     <dragThreshold>1</dragThreshold>
     <doubleClickTime>200</doubleClickTime>
