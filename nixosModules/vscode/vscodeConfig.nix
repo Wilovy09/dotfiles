@@ -50,10 +50,10 @@
           sha256 = "sha256-uXqWebxnDwaUVLFG6MUh4bZ7jw5d2rTHRm5NoR2n0Vs=";
         }
         {
-          name = "dancehelix";
-          publisher = "silverquark";
-          version = "0.5.16";
-          sha256 = "sha256-oHwtlbB18ctEnfStDOpJ+2/Kq41JZog8FVhTa1/s7m0=";
+          name = "vim";
+          publisher = "vscodevim";
+          version = "1.28.0";
+          sha256 = "sha256-yAUzSSgVAiUGoSvVNA1MIMtp1nVQAzoqUyOsAhASBQM=";
         }
         {
           name = "gitlens";

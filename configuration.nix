@@ -15,6 +15,8 @@
   networking.networkmanager.enable = true;
   time.timeZone = "America/Monterrey";
   i18n.defaultLocale = "en_US.UTF-8";
+  
+  environment.variables.BROWSER = "/run/current-system/sw/bin/zen";
 
   services.xserver = {
     enable = true;
@@ -62,7 +64,7 @@
     lazydocker
     xplr
     arandr
-    brave
+    # brave
     spotify
     go
     fnm
