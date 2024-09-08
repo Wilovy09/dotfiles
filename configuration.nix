@@ -15,7 +15,7 @@
   networking.networkmanager.enable = true;
   time.timeZone = "America/Monterrey";
   i18n.defaultLocale = "en_US.UTF-8";
-  
+
   environment.variables.BROWSER = "/run/current-system/sw/bin/zen";
 
   services.xserver = {
@@ -42,9 +42,13 @@
     shell = pkgs.zsh;
   };
 
+  environment.variables.FLAKE = "/home/wilovy/wilovy.nix/";
   programs.nh = {
     enable = true;
-    flake = "/etc/nixos";
+    clean = {
+      enable = true;
+      extraArgs = "--keep-since 7d";
+    };
   };
 
   system.stateVersion = "24.05";
@@ -64,7 +68,7 @@
     lazydocker
     xplr
     arandr
-    # brave
+    brave
     spotify
     go
     fnm
@@ -94,7 +98,6 @@
     rofi
     flameshot
     feh
-    picom
     obsidian
     gnumake
     gccgo14
@@ -118,10 +121,6 @@
     enable = true;
     enableOnBoot = true;
     storageDriver = "btrfs";
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
   /* REDIS */
@@ -130,3 +129,4 @@
     enable = true;
   };
 }
+

@@ -32,7 +32,6 @@ def replace_txt_block(file_path, new_content):
 def copy_configs():
     configs = [
         '~/.config/helix/languages.toml',
-        '~/.config/picom',
         '~/.config/polybar',
         '~/.config/openbox',
         '~/.config/rofi',
