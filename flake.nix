@@ -7,6 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+    cartero.url = "github:danirod/cartero";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, zen-browser, ... }: {
@@ -22,10 +23,10 @@
             home-manager.users.wilovy = import ./home.nix;
             home-manager.backupFileExtension = "hm-backup";
           }
-          # Agrega el paquete zen-browser directamente
           {
-            environment.systemPackages = with inputs.zen-browser.packages."x86_64-linux"; [
-              default  # O specific o generic
+            environment.systemPackages = [
+              inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
+              inputs.cartero.packages."x86_64-linux".default
             ];
           }
         ];

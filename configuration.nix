@@ -3,12 +3,12 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./nixosModules/vscode/vscodeConfig.nix
-      ./nixosModules/zsh/zshConfig.nix
-      ./nixosModules/starship/starshipConfig.nix
-      ./nixosModules/fonts/fontsConfig.nix
-      ./nixosModules/boot/bootConfig.nix
-      ./nixosModules/sddm/sddmConfig.nix
+      ./nixos/boot/boot.nix
+      ./nixos/fonts.nix
+      ./nixos/sddm.nix
+      ./nixos/starship.nix
+      ./nixos/vscode.nix
+      ./nixos/zsh.nix
     ];
 
   networking.hostName = "nixos";
@@ -26,14 +26,11 @@
     excludePackages = with pkgs; [ xterm ];
   };
 
-  # Desktop
-  services.xserver.windowManager.openbox.enable = true;
-
   services.printing.enable = true;
-  # Detectar usb
   services.udisks2.enable = true;
-
   hardware.pulseaudio.enable = true;
+  
+  services.xserver.windowManager.openbox.enable = true;
 
   services.libinput.enable = true;
   users.users.wilovy = {
@@ -109,6 +106,7 @@
     lxappearance
     lsof
     xclip
+    btop 
   ];
 
   /* VIM */

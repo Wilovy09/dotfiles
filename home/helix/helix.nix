@@ -8,13 +8,11 @@
     cowsay
   ];
 
-  programs.helix.enable = true;
   programs.helix = {
-    # Ignores
+    enable = false;
     ignores = [ "!.**" "!.github/" "!.gitignore" "!.gitattributes" "node_modules/" ];
-    # Settings
     settings = {
-      theme = "wilovy";
+      theme = "gruvbox";
       editor = {
         line-number = "relative";
         mouse = true;
@@ -66,7 +64,6 @@
         "A-tab" = ":buffer-next";
         "S-tab" = ":buffer-previous";
         "C-f" = [ ":new" ":insert-output pwd | xplr" ":buffer-close!" ":redraw" ];
-        # "C-a" = [ ":new" ":open $(xplr)" ":buffer-close!" ":redraw" ];
         "y" = ":clipboard-yank-join";
 
         "esc" = {

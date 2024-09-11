@@ -7,13 +7,13 @@ configuration {
 
 * {
     bg0:  #28282870;  /* Gruvbox background */
-    bg1:  #3c3836;  /* Gruvbox background lighter */
-    bg2:  #504945;  /* Gruvbox background light */
-    bg3:  #665c54;  /* Gruvbox background lighter */
-    bg4:  #7c6f64;  /* Gruvbox background lightest */
+    bg1:  #3c3836;    /* Gruvbox background lighter */
+    bg2:  #504945;    /* Gruvbox background light */
+    bg3:  #665c54;    /* Gruvbox background lighter */
+    bg4:  #7c6f64;    /* Gruvbox background lightest */
 
-    fg0:  #ebdbb2;  /* Gruvbox foreground light */
-    fg1:  #d5c4a1;  /* Gruvbox foreground lighter */
+    fg0:  #ebdbb2;    /* Gruvbox foreground light */
+    fg1:  #d5c4a1;    /* Gruvbox foreground lighter */
 
     background-color: transparent;
     text-color:       @fg0;

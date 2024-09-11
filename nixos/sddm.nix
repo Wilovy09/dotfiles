@@ -11,7 +11,7 @@
       flavor = "mocha";
       font  = "Noto Sans";
       fontSize = "9";
-      background = "${../../suzume_door.jpg}";
+      background = "${../suzume_door.jpg}";
       loginBackground = true;
     })
   ];

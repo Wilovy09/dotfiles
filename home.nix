@@ -1,9 +1,11 @@
 { pkgs, config, ... }:
 {
   imports = [
-    ./nixosModules/helix/helixConfig.nix
-    ./nixosModules/kitty/kittyConfig.nix
-    ./nixosModules/picom/picomConf.nix
+    ./home/kitty.nix
+    ./home/picom.nix
+    ./home/zellij.nix
+    ./home/openbox/openbox.nix
+    ./home/rofi/rofi.nix
   ];
 
   home.username = "wilovy";
