@@ -7,7 +7,7 @@
   ];
 
   environment.shellAliases = {
-    ls = "GoLS --emoji --tree";
+    ls = "eza --tree --level 1 --icons=always";
     icat = "kitten icat";
     shx = "sudo hx";
     sxplr = "sudo xplr";
@@ -24,7 +24,6 @@
       "${ZSH}"
     ];
   };
-  # export ZSH_CUSTOM=~/NIX-CONFIGS/oh-my-zsh
 
   programs.zsh = {
     enable = true;

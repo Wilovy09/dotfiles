@@ -106,6 +106,7 @@
     lxappearance
     lsof
     xclip
+    eza
     btop 
   ];
 
