@@ -6,6 +6,7 @@
     ./home/zellij.nix
     ./home/openbox/openbox.nix
     ./home/rofi/rofi.nix
+    ./home/nvim/nvimConf.nix
   ];
 
   home.username = "wilovy";
