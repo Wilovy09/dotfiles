@@ -7,7 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     zen-browser.url = "github:MarceColl/zen-browser-flake";
-    cartero.url = "github:danirod/cartero";
+    # cartero.url = "github:danirod/cartero";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, zen-browser, ... }: {
@@ -26,7 +26,7 @@
           {
             environment.systemPackages = [
               inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
-              inputs.cartero.packages."x86_64-linux".default
+              # inputs.cartero.packages."x86_64-linux".default
             ];
           }
         ];

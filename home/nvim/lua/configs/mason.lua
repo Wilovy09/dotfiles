@@ -7,7 +7,7 @@ return {
 		"rustfmt",
 		"prettier",
 		"typescript-language-server",
-		"vetur-vls",
+		"vue-language-server",
 		"astro-language-server",
 		"eslint_d",
     "tailwindcss-language-server"

@@ -36,14 +36,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
 })
--- lspconfig.rust_analyzer.setup({
---   capabilities = capabilities,
--- })
 lspconfig.tsserver.setup({
   capabilities = capabilities,
 })
-lspconfig.vuels.setup({
+lspconfig.volar.setup({
   capabilities = capabilities,
+  cmd = { "vue-language-server", "--stdio" },
 })
 lspconfig.astro.setup({
   capabilities = capabilities,
