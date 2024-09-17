@@ -19,6 +19,9 @@
       enabled_layouts = "*";
     };
     extraConfig = ''
+      margin_width 5 0
+      modify_font cell_height 125%
+
       # Gruvbox color scheme
       cursor #928374
       cursor_text_color background
@@ -72,8 +75,6 @@
       # white (fg4/fg3)
       color7 #a89984
       color15 #bdae93
-
-      modify_font cell_height 125%
     '';
   };
 }
