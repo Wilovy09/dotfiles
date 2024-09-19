@@ -10,7 +10,8 @@ return {
 		"vue-language-server",
 		"astro-language-server",
 		"eslint_d",
-    "tailwindcss-language-server"
+    "tailwindcss-language-server",
+    "nil"
 	},
 
 	max_concurrent_installers = 10,

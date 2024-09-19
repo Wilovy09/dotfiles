@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{...}: {
   xdg.configFile = {
     "nvim/init.lua".source = ./init.lua;
 
@@ -20,4 +19,3 @@
     "nvim/lua/configs/toogleterm.lua".source = ./lua/configs/toogleterm.lua;
   };
 }
-

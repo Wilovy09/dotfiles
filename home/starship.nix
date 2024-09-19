@@ -1,10 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; [
-    starship
-  ];
-
   programs.starship = {
     enable = true;
     settings = {
@@ -48,7 +43,7 @@
         style = "fg:#83cd29";
         format = "[$symbol]($style)";
       };
-      golang = {
+     golang = {
         symbol = "🦦";
         style = "fg:#78d5fd";
         format = "[$symbol]($style)";

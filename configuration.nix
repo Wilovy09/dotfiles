@@ -1,15 +1,12 @@
-{ config, lib, pkgs, ... }:
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./nixos/boot/boot.nix
-      ./nixos/fonts.nix
-      ./nixos/sddm.nix
-      ./nixos/starship.nix
-      ./nixos/vscode.nix
-      ./nixos/zsh.nix
-    ];
+{pkgs, ...}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./nixos/boot/boot.nix
+    ./nixos/fonts.nix
+    ./nixos/sddm.nix
+    ./nixos/vscode.nix
+    ./nixos/zsh.nix
+  ];
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -23,20 +20,20 @@
     xkb.layout = "us";
     xkb.variant = "altgr-intl";
     xkb.options = "terminate:ctrl_alt_bksp";
-    excludePackages = with pkgs; [ xterm ];
+    excludePackages = with pkgs; [xterm];
   };
 
   services.printing.enable = true;
   services.udisks2.enable = true;
   hardware.pulseaudio.enable = true;
-  
+
   services.xserver.windowManager.openbox.enable = true;
 
   services.libinput.enable = true;
   users.users.wilovy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" "redis" ];
-    shell = pkgs.zsh;
+    extraGroups = ["wheel" "video" "audio" "networkmanager" "docker" "redis"];
+    shell = pkgs.nushell;
   };
 
   environment.variables.FLAKE = "/home/wilovy/wilovy.nix/";
@@ -52,8 +49,13 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.package = pkgs.nix-ld-rs;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
+  programs.firefox = {
+    enable = true;
+    package = pkgs.firefox;
+    nativeMessagingHosts.packages = [pkgs.firefoxpwa];
+  };
   environment.systemPackages = with pkgs; [
     nil
     nixpkgs-fmt
@@ -65,7 +67,6 @@
     lazydocker
     xplr
     arandr
-    brave
     spotify
     go
     fnm
@@ -88,7 +89,6 @@
     (pkgs.python312.withPackages (python-pkgs: [
       python312Packages.python-lsp-server
     ]))
-    telegram-desktop
     redis
     insomnia
     polybar
@@ -107,25 +107,26 @@
     lsof
     xclip
     eza
-    btop 
+    btop
+    firefoxpwa
+    gruvbox-plus-icons
+    alejandra
   ];
 
-  /* VIM */
+  # VIM
   programs.neovim = {
     enable = true;
   };
 
-  /* DOCKER */
+  # DOCKER
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
     storageDriver = "btrfs";
   };
 
-  /* REDIS */
-  /* redis-server */
+  # REDIS redis-server
   services.redis.servers."talos" = {
     enable = true;
   };
 }
-

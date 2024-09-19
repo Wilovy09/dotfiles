@@ -61,6 +61,6 @@ lspconfig.emmet_language_server.setup({
 lspconfig.pyright.setup({
   capabilities = capabilities,
 })
--- lspconfig..setup({
---   capabilities = capabilities,
--- })
+lspconfig.nil_ls.setup({
+  capabilities = capabilities,
+})

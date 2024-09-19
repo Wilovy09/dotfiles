@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     zsh
@@ -9,7 +8,6 @@
   environment.shellAliases = {
     ls = "eza --tree --level 1 --icons=always";
     icat = "kitten icat";
-    shx = "sudo hx";
     sxplr = "sudo xplr";
   };
 
@@ -35,7 +33,7 @@
     syntaxHighlighting.enable = true;
     ohMyZsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = ["git"];
     };
   };
 }

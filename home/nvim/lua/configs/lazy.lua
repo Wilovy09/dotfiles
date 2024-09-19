@@ -129,11 +129,6 @@ return {
   require("configs.completions"),
   -- ToogleTerm
   require("configs.toogleterm"),
-  -- ColorColum | Ruler | VirtColumn
-  -- {
-  --   "m4xshen/smartcolumn.nvim",
-  --   opts = {},
-  -- },
   -- Colorizer
   {
     "NvChad/nvim-colorizer.lua",
@@ -148,14 +143,34 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      -- add any options here
+      routes = {
+        -- show recording messages
+        {
+          view = "notify",
+          filter = { event = "msg_showmode" },
+        },
+        -- hide written messages
+        {
+          filter = {
+            event = "msg_show",
+            kind = "",
+            find = "written",
+          },
+          opts = { skip = true },
+        },
+        -- hide reemove messages
+        {
+          filter = {
+            event = "notify",
+            kind = "",
+            find = "was properly removed",
+          },
+          opts = { skip = true },
+        },
+      },
     },
     dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
   },
