@@ -16,6 +16,6 @@
     "nvim/lua/configs/none-ls.lua".source = ./lua/configs/none-ls.lua;
     "nvim/lua/configs/nvimtree".source = ./lua/configs/nvimtree.lua;
     "nvim/lua/configs/telescope.lua".source = ./lua/configs/telescope.lua;
-    "nvim/lua/configs/toogleterm.lua".source = ./lua/configs/toogleterm.lua;
+    "nvim/lua/configs/nvterm.lua".source = ./lua/configs/nvterm.lua;
   };
 }
