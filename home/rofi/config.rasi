@@ -3,6 +3,7 @@
 configuration {
   font: "JetBrainsMono Nerd Font Medium 12";
   show-icons: true;
+  icon-theme: "gruvbox-plus-icons";
 }
 
 * {

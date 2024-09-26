@@ -111,6 +111,7 @@
     firefoxpwa
     gruvbox-plus-icons
     alejandra
+    brave
   ];
 
   # VIM

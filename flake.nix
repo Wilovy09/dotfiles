@@ -6,11 +6,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    # zen-browser.url = "github:MarceColl/zen-browser-flake";
     # cartero.url = "github:danirod/cartero";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, zen-browser, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -25,7 +25,7 @@
           }
           {
             environment.systemPackages = [
-              inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
+              # inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
               # inputs.cartero.packages."x86_64-linux".default
             ];
           }

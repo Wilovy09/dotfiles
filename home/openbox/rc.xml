@@ -241,7 +241,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>zen</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-space">

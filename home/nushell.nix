@@ -20,7 +20,6 @@
         cr = "${c} run";
         cs = "${c} search";
         ct = "${c} test";
-
         # Git
         ga = "${g} add";
         gc = "${g} commit";
@@ -28,26 +27,21 @@
         gl = "${g} log";
         gs = "${g} status";
         gp = "${g} push origin main";
-
         # MyShellsAliases
         tree = "eza --tree --level 1 --icons=always";
         icat = "kitten icat";
         sxplr = "sudo xplr";
         nv = "nvim";
       };
-
       environmentVariables = {
         SHELL = "${pkgs.nushell}/bin/nu";
         EDITOR = "nvim";
       };
-
       extraConfig = let
         conf = builtins.toJSON {
           show_banner = false;
-
           ls.clickable_links = true;
           rm.always_trash = true;
-
           table = {
             mode = "rounded";
             index_mode = "always";
@@ -56,6 +50,19 @@
         };
       in ''
         $env.config = ${conf};
+        load-env (fnm env --shell bash
+          | lines
+          | str replace 'export ' "" 
+          | str replace -a '"' ""
+          | split column =
+          | rename name value
+          | where name != "FNM_ARCH" and name != "PATH"
+          | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value }
+        )
+        $env.PATH = ($env.PATH
+            | split row (char esep)
+            | prepend $"($env.FNM_MULTISHELL_PATH)/bin"
+        )
         source /home/wilovy/.config/nushell/extra.nu
       '';
     };
