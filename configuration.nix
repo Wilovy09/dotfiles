@@ -11,6 +11,7 @@
     ./nixos/zsh.nix
     ./nixos/services.nix
     ./nixos/programs.nix
+    ./nixos/portals.nix
   ];
 
   networking.hostName = "nixos";
