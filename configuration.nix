@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./nixos/boot/boot.nix
@@ -7,6 +7,8 @@
     ./nixos/vscode.nix
     ./nixos/zsh.nix
   ];
+  
+  services.pipewire.enable = lib.mkForce false;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -33,7 +35,7 @@
   users.users.wilovy = {
     isNormalUser = true;
     extraGroups = ["wheel" "video" "audio" "networkmanager" "docker" "redis"];
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   environment.variables.FLAKE = "/home/wilovy/wilovy.nix/";
@@ -68,7 +70,6 @@
     xplr
     arandr
     spotify
-    go
     fnm
     xfce.thunar
     gvfs
@@ -90,7 +91,6 @@
       python312Packages.python-lsp-server
     ]))
     redis
-    insomnia
     polybar
     rofi
     flameshot
@@ -112,6 +112,7 @@
     gruvbox-plus-icons
     alejandra
     brave
+    zed-editor
   ];
 
   # VIM

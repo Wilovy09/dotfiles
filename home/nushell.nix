@@ -34,8 +34,8 @@
         nv = "nvim";
       };
       environmentVariables = {
-        SHELL = "${pkgs.nushell}/bin/nu";
-        EDITOR = "nvim";
+        SHELL = "^${pkgs.nushell}/bin/nu";
+        EDITOR = "^nvim";
       };
       extraConfig = let
         conf = builtins.toJSON {
@@ -50,11 +50,11 @@
         };
       in ''
         $env.config = ${conf};
-        load-env (fnm env --shell bash
+        load-env (${pkgs.fnm}/bin/fnm env --shell bash
           | lines
           | str replace 'export ' "" 
           | str replace -a '"' ""
-          | split column =
+          | split column '='
           | rename name value
           | where name != "FNM_ARCH" and name != "PATH"
           | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value }
