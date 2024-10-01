@@ -1,11 +1,15 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.starship = {
     enable = true;
     settings = {
       add_newline = false;
       format = ''
-        ($git_branch) ($git_status)($nix_shell)($nodejs)($golang)($rust)($python)$directory$character
+        ($git_branch) ($git_status)($nix_shell)($nodejs)($swift)($golang)($rust)($python)$directory$character
       '';
       directory = {
         format = "[󰉋 ](fg:#D8A657 bg:none)[$path ](fg:#D8A657 bg:none)";
@@ -43,7 +47,7 @@
         style = "fg:#83cd29";
         format = "[$symbol]($style)";
       };
-     golang = {
+      golang = {
         symbol = "🦦";
         style = "fg:#78d5fd";
         format = "[$symbol]($style)";
@@ -56,6 +60,11 @@
       python = {
         symbol = "🐍";
         style = "fg:#fee262";
+        format = "[$symbol]($style)";
+      };
+      swift = {
+        symbol = "🦒";
+        style = "fg:#FF0";
         format = "[$symbol]($style)";
       };
     };

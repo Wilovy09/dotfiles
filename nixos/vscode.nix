@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     (vscode-with-extensions.override {
       vscodeExtensions = [
-        vscode-extensions.github.copilot-chat
         vscode-extensions.esbenp.prettier-vscode
         vscode-extensions.bradlc.vscode-tailwindcss
         vscode-extensions.usernamehw.errorlens

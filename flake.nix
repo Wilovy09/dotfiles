@@ -5,12 +5,16 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
     # zen-browser.url = "github:MarceColl/zen-browser-flake";
     # cartero.url = "github:danirod/cartero";
+    # Rust
+    fenix.url = "github:nix-community/fenix/monthly";
   };
-
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -24,9 +28,11 @@
             home-manager.backupFileExtension = "hm-backup";
           }
           {
+            nixpkgs.overlays = [inputs.fenix.overlays.default];
             environment.systemPackages = [
               # inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
               # inputs.cartero.packages."x86_64-linux".default
+              inputs.fenix.packages.x86_64-linux.stable.toolchain
             ];
           }
         ];
@@ -34,4 +40,3 @@
     };
   };
 }
-

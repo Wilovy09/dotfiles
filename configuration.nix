@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./nixos/boot/boot.nix
@@ -51,7 +48,6 @@
     xfce.thunar
     gvfs
     fzf
-    rustup
     gcc_multi
     fastfetch
     dconf
@@ -90,6 +86,8 @@
     alejandra
     brave
     zed-editor
+    airshipper
+    rustup
   ];
 
   # DOCKER
