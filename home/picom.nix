@@ -8,6 +8,7 @@
 
     opacityRules = [
       "85:class_g = 'Code'"
+      "85:class_g = 'dev.zed.Zed'"
       "85:class_g = 'kitty'"
     ];
 
@@ -44,4 +45,3 @@
     };
   };
 }
-
