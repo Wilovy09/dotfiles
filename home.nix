@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./home/kitty.nix
     ./home/picom.nix
@@ -11,7 +7,7 @@
     ./home/rofi/rofi.nix
     ./home/nvim/nvimConf.nix
     ./home/nushell.nix
-    ./home/starship.nix
+    ./home/starship_themes/gruvbox.nix
   ];
 
   home.username = "wilovy";

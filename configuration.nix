@@ -45,7 +45,6 @@
     arandr
     spotify
     fnm
-    xfce.thunar
     gvfs
     fzf
     gcc_multi
@@ -91,9 +90,10 @@
   ];
 
   # DOCKER
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-    storageDriver = "btrfs";
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
   };
 }

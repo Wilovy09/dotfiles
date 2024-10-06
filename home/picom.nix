@@ -17,7 +17,7 @@
     settings = {
       blur = {
         method           = "dual_kawase";
-        strength         = 4;
+        strength         = 1;
         background       = false;
         background-frame = false;
         background-fixed = false;
