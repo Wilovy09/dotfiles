@@ -85,8 +85,9 @@
     alejandra
     brave
     zed-editor
-    airshipper
     rustup
+    hoppscotch
+    onefetch
   ];
 
   # DOCKER
