@@ -27,6 +27,9 @@
       excludePackages = with pkgs; [xterm];
       windowManager = {
         openbox = {
+          enable = false;
+        };
+        leftwm = {
           enable = true;
         };
       };
