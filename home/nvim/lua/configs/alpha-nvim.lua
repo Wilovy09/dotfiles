@@ -7,7 +7,8 @@ return {
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
-
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#FFFFFF" })
+    vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#F74C00" })
     dashboard.section.header.val = {
       [[                  █ ██ ██ ]],
       [[               █ ████████ █          █ ]],
@@ -27,7 +28,7 @@ return {
     }
     -- stylua: ignore
     dashboard.config.layout = {
-      { type = "padding", val = 1 }, dashboard.section.header,
+      { type = "padding", val = 0 }, dashboard.section.header,
       { type = "padding", val = 1 }, dashboard.section.buttons,
       { type = "padding", val = 1 }, dashboard.section.footer,
     }
