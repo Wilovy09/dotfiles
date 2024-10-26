@@ -7,7 +7,7 @@
     ./home/rofi/rofi.nix
     ./home/nvim/nvimConf.nix
     ./home/nushell.nix
-    ./home/starship_themes/gruvbox.nix
+    ./home/starship_themes/my_prompt.nix
   ];
 
   home.username = "wilovy";
