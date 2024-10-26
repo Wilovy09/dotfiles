@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 exec picom &
 exec polybar &
-exec feh --bg-scale ~/Backgrounds/gb_city.png
+exec feh --bg-scale ~/Backgrounds/8.jpg
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ] && type dbus-launch >/dev/null; then
   eval "$(dbus-launch --sh-syntax --exit-with-session)"
