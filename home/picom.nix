@@ -10,6 +10,7 @@
       "85:class_g = 'Code'"
       "85:class_g = 'dev.zed.Zed'"
       "85:class_g = 'kitty'"
+      "85:class_g = 'rio'"
     ];
 
     fadeSteps = [0.08 0.08];

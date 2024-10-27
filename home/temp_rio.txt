@@ -1,0 +1,72 @@
+padding-x = 10
+padding-y = [10, 10]
+
+[cursor]
+shape = 'block'
+blinking = false
+
+[editor]
+program = "nvim"
+args = []
+
+[window]
+opacity = 0.85
+blur = true 
+decorations = "enabled"
+
+[fonts]
+size = 15
+features = ["ss02", "ss03", "ss05", "ss19"]
+
+[colors]
+background = '#282828'                      # Gruvbox dark background
+black = '#1d2021'                           # Gruvbox black
+blue = '#83a598'                            # Gruvbox blue
+cursor = '#a89984'                          # Gruvbox light grey (for cursor)
+cyan = '#8ec07c'                            # Gruvbox green
+foreground = '#ebdbb2'                      # Gruvbox foreground
+green = '#b8bb26'                           # Gruvbox yellow
+magenta = '#d3869b'                         # Gruvbox magenta
+red = '#fb4934'                             # Gruvbox red
+white = '#ebdbb2'                           # Gruvbox foreground (same as foreground)
+yellow = '#fabd2f'                          # Gruvbox yellow
+
+tabs = '#458588'                            # Gruvbox cyan
+tabs-foreground = '#a89984'                 # Gruvbox light grey
+tabs-active = '#504945'                     # Gruvbox grey
+tabs-active-highlight = '#fe8019'           # Gruvbox orange
+tabs-active-foreground = '#ebdbb2'          # Gruvbox foreground
+
+search-match-background = '#fe8019'         # Gruvbox orange
+search-match-foreground = '#1d2021'         # Gruvbox black
+search-focused-match-background = '#b16286' # Gruvbox purple
+search-focused-match-foreground = '#ebdbb2' # Gruvbox foreground
+
+selection-foreground = '#ebdbb2'            # Gruvbox foreground
+selection-background = '#3c3836'            # Gruvbox grey
+
+dim-black = '#3c3836'                       # Gruvbox dark grey
+dim-blue = '#7c6f64'                        # Gruvbox greyish
+dim-cyan = '#b8bb26'                        # Gruvbox yellow
+dim-foreground = '#b8bb26'                  # Gruvbox yellow
+dim-green = '#b8bb26'                       # Gruvbox yellow
+dim-magenta = '#d3869b'                     # Gruvbox magenta
+dim-red = '#fb4934'                         # Gruvbox red
+dim-white = '#bdae93'                       # Gruvbox light grey
+dim-yellow = '#fabd2f'                      # Gruvbox yellow
+
+light-black = '#928374'                     # Gruvbox light grey
+light-blue = '#83a598'                      # Gruvbox blue
+light-cyan = '#8ec07c'                      # Gruvbox green
+light-foreground = '#ebdbb2'                # Gruvbox foreground
+light-green = '#b8bb26'                     # Gruvbox yellow
+light-magenta = '#d3869b'                   # Gruvbox magenta
+light-red = '#fb4934'                       # Gruvbox red
+light-white = '#ffffff'                     # Gruvbox white
+light-yellow = '#fabd2f'                    # Gruvbox yellow
+
+
+[renderer]
+performance = "Low"
+target-fps = 30
+backend = "Automatic"
