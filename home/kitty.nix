@@ -15,12 +15,11 @@
       url_color = "#83a598";
       url_style = "dotted";
       confirm_os_window_close = "0";
-      background_opacity = "0.90";
+      background_opacity = "0.85";
       enabled_layouts = "*";
     };
     extraConfig = ''
       margin_width 5 0
-      modify_font cell_height 125%
 
       # Gruvbox color scheme
       cursor #928374

@@ -88,7 +88,8 @@
     rustup
     hoppscotch
     onefetch
-    # rio              # My PC dosent have power to do this
+    rio
+    zip
   ];
 
   # DOCKER
