@@ -13,10 +13,3 @@
 ## Preview
 
 ![FastFetch](./public/img1.png)
-
-## Configuraciones pendientes
-
-* [ ] Eww status bar.
-* [ ] LeftWM.
-* [ ] Zed editor.
-

@@ -3,7 +3,6 @@
     ./home/kitty.nix
     ./home/picom.nix
     ./home/zellij.nix
-    ./home/openbox/openbox.nix
     ./home/rofi/rofi.nix
     ./home/editors/nvim/nvimConf.nix
     ./home/nushell.nix
