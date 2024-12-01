@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # Se activa automaticamente en el autostart de openbox
   services.dbus.enable = true;
 
   xdg.portal = {

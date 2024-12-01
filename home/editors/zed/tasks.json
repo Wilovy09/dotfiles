@@ -1,0 +1,28 @@
+[
+  {
+    "label": "LazyGit",
+    // "workspace::NewCenterTerminal | lazygit ."?????
+    "command": "lazygit",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "LazyDocker",
+    "command": "lazydocker",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  },
+  {
+    "label": "LazySQL",
+    "command": "lazysql",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success"
+  }
+]
+

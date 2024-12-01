@@ -7,7 +7,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # zen-browser.url = "github:MarceColl/zen-browser-flake";
     # cartero.url = "github:danirod/cartero";
-    # Rust
     fenix.url = "github:nix-community/fenix/monthly";
   };
   outputs = inputs @ {

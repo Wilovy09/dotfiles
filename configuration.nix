@@ -9,6 +9,7 @@
     ./nixos/services.nix
     ./nixos/programs.nix
     ./nixos/portals.nix
+    # ./nixos/pkgs/yaak.nix
   ];
 
   networking.hostName = "nixos";
@@ -16,7 +17,7 @@
   time.timeZone = "America/Monterrey";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  environment.variables.BROWSER = "/run/current-system/sw/bin/zen";
+  environment.variables.BROWSER = "/run/current-system/sw/bin/brave";
 
   hardware.pulseaudio.enable = true;
 
@@ -70,10 +71,7 @@
     obsidian
     gnumake
     gccgo14
-    openbox
-    obconf
     discord
-    unzip
     lazysql
     lxappearance
     lsof
@@ -86,10 +84,15 @@
     brave
     zed-editor
     rustup
-    hoppscotch
     onefetch
-    rio
     zip
+    unzip
+    rar
+    unrar
+    thunderbird
+    sublime-merge
+    omnisharp-roslyn
+    libsForQt5.dolphin
   ];
 
   # DOCKER

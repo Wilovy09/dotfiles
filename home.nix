@@ -5,9 +5,10 @@
     ./home/zellij.nix
     ./home/openbox/openbox.nix
     ./home/rofi/rofi.nix
-    ./home/nvim/nvimConf.nix
+    ./home/editors/nvim/nvimConf.nix
     ./home/nushell.nix
     ./home/starship_themes/my_prompt.nix
+    ./home/editors/zed
   ];
 
   home.username = "wilovy";
