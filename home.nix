@@ -14,6 +14,7 @@
   home.homeDirectory = "/home/wilovy";
 
   home.stateVersion = "24.05";
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+  ];
   programs.home-manager.enable = true;
 }

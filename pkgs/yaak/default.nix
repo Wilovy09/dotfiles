@@ -11,7 +11,7 @@
     {
       x86_64-linux = {
         name = "${pname}_${version}_amd64";
-        hash = "sha256-23yG60O8oxO3kWf4ZM0b8MXU+Dh3K3eQ2Mn7p7aX+DM=";
+        hash = "sha256-clFRDwj9IacrWGb7hP7U2rxhIs5iJiZkm83U9Mztc1s=";
       };
     }
     .${hostPlatform.system}

@@ -9,7 +9,6 @@
     ./nixos/services.nix
     ./nixos/programs.nix
     ./nixos/portals.nix
-    # ./nixos/pkgs/yaak.nix
   ];
 
   networking.hostName = "nixos";
@@ -93,6 +92,7 @@
     sublime-merge
     omnisharp-roslyn
     libsForQt5.dolphin
+    pkg-config
   ];
 
   # DOCKER

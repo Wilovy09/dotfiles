@@ -13,7 +13,9 @@
     nixpkgs,
     home-manager,
     ...
-  }: {
+  }: let
+    overlay = import ./pkgs;
+  in {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -27,7 +29,7 @@
             home-manager.backupFileExtension = "hm-backup";
           }
           {
-            nixpkgs.overlays = [inputs.fenix.overlays.default];
+            nixpkgs.overlays = [overlay inputs.fenix.overlays.default];
             environment.systemPackages = [
               # inputs.zen-browser.packages."x86_64-linux".default  # O specific o generic
               # inputs.cartero.packages."x86_64-linux".default
