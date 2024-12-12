@@ -193,4 +193,14 @@ return {
 			require("easy-dotnet").setup()
 		end,
 	},
+  -- COdeActions
+  {
+    "aznhe21/actions-preview.nvim",
+    config = function()
+      vim.keymap.set({ "v", "n" }, "<leader>ga", require("actions-preview").code_actions)
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+  },
 }

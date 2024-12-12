@@ -1,4 +1,4 @@
--- Configuraciones generales
+local map = vim.api.nvim_set_keymap
 vim.g.mapleader = " "
 
 vim.wo.relativenumber = true
@@ -10,10 +10,12 @@ vim.opt.expandtab = true -- Convierte tabs a espacios
 vim.opt.swapfile = false
 
 -- Mapeos de teclas
-vim.api.nvim_set_keymap("n", "<C-s>", ":w!<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-Esc>", ":q!<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeFindFileToggle<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<S-f>", "zfa}", { noremap = true, silent = true })
+map("n", "<C-s>", ":w!<CR>", { noremap = true, silent = true })
+map("n", "<C-Esc>", ":q!<CR>", { noremap = true, silent = true })
+map("n", "<C-h>", ":NvimTreeFindFileToggle<CR>", { noremap = true, silent = true })
+map("n", "<S-f>", "zfa}", { noremap = true, silent = true })
+map("n", "<leader>h", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
+--map("n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
 -- Cargar plugins
 require("base.plugins.lazy")
