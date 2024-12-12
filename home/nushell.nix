@@ -27,7 +27,7 @@
         gl = "${g} log";
         gs = "${g} status";
         gp = "${g} push origin main";
-        # MyShellsAliases
+
         tree = "eza --tree --level 1 --icons=always";
         icat = "kitten icat";
         sxplr = "sudo xplr";
@@ -35,7 +35,6 @@
       };
       environmentVariables = {
         SHELL = "^${pkgs.nushell}/bin/nu";
-        EDITOR = "^nvim";
       };
       extraConfig = let
         conf = builtins.toJSON {

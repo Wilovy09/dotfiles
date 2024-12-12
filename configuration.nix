@@ -22,7 +22,7 @@
 
   users.users.wilovy = {
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "audio" "networkmanager" "docker" "redis"];
+    extraGroups = ["wheel" "video" "audio" "networkmanager" "docker" "redis" "adbusers"];
     shell = pkgs.zsh;
   };
 
@@ -33,66 +33,95 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    # NIX
     nil
+    # alejandra
+    nixd # nix lsp
     nixpkgs-fmt
-    wget
+    nix-prefetch
+    nix-prefetch-git
+    
+    # C/C++
     cmake
+    gcc_multi
+    gnumake
+    gccgo14
+    
+    # GIT
     git
     gh
     lazygit
-    lazydocker
+
+    # FILE MANAGERS
     xplr
+    libsForQt5.dolphin
+
+    # SCREEN MANAGEMEN
     arandr
-    spotify
+
+
+    # NODE
     fnm
-    gvfs
-    fzf
-    gcc_multi
-    fastfetch
-    dconf
-    pavucontrol
-    ripgrep
-    xdg-utils
-    psmisc
-    obs-studio
-    nix-prefetch
-    nix-prefetch-git
+
+    # PYTHON
     python312
     python312Packages.pip
     (pkgs.python312.withPackages (python-pkgs: [
       python312Packages.python-lsp-server
     ]))
-    redis
+
+    # BROWSERS
+    brave
+    firefoxpwa
+
+    # EDITORS
+    zed-editor
+
+    # SOCIAL
+    # revolt-desktop # like discord
+    discord
+
+    # MUSIC
+    spotify
+
+    # STATUS BAR
     polybar
     rofi
-    flameshot
-    feh
-    obsidian
-    gnumake
-    gccgo14
-    discord
-    lazysql
-    lxappearance
-    lsof
-    xclip
+
+    # LS
     eza
-    btop
-    firefoxpwa
-    gruvbox-plus-icons
-    alejandra
-    brave
-    zed-editor
-    rustup
-    onefetch
-    zip
-    unzip
-    rar
-    unrar
-    thunderbird
-    sublime-merge
-    omnisharp-roslyn
-    libsForQt5.dolphin
+
+    # Backgrounds
+    feh
+
+    # MISC
+    gvfs
+    dconf
+    pavucontrol
     pkg-config
+    ripgrep                     # grep²
+    xdg-utils
+    psmisc
+    xclip
+    lsof                        # view ports
+    fastfetch                   # see pc specs
+    gruvbox-plus-icons
+    fzf                         # GOD
+    lazydocker                  # like docker desktop, but in terminal
+    lazysql                     # DBs clients
+    redis                       # 
+    flameshot                   # screenshots
+    obsidian                    # notes
+    lxappearance                # styles
+    btop                        # task manager
+    rustup                      # rust
+    onefetch                    # see github project stats
+    obs-studio                  # to record screen
+    thunderbird                 # email client
+    omnisharp-roslyn            # C#
+    ngrok                       # tunnels
+    bloomrpc                    # gRPC gui client
+    scrcpy                      # to share phone screen
   ];
 
   # DOCKER

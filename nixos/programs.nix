@@ -19,5 +19,8 @@
       enable = true;
       package = pkgs.nix-ld-rs;
     };
+    adb = {
+      enable = true;
+    };
   };
 }

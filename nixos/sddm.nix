@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   services.displayManager.sddm = {
     enable = true;
@@ -11,7 +11,7 @@
       flavor = "mocha";
       font  = "Noto Sans";
       fontSize = "9";
-      background = "${../suzume_door.jpg}";
+      background = "${../templo.png}";
       loginBackground = true;
     })
   ];

@@ -11,7 +11,9 @@ return {
 		"astro-language-server",
 		"eslint_d",
     "tailwindcss-language-server",
-    "nil"
+    "nil",
+    "omnisharp",
+    "chsarpier",
 	},
 
 	max_concurrent_installers = 10,

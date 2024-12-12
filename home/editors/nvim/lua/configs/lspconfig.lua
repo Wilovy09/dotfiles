@@ -90,3 +90,7 @@ lspconfig.pyright.setup({
 lspconfig.nil_ls.setup({
 	capabilities = capabilities,
 })
+lspconfig.omnisharp.setup({
+	capabilities = capabilities,
+  cmd = { "OmniSharp", "-lsp" },
+})
