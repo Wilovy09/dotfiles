@@ -1,7 +1,11 @@
 return {
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 		exclude = { vim.fn.stdpath("config") .. "/lua/custom" },
+	},
+	diagnostics = {
+		enable = true,
+		show_on_dirs = true,
 	},
 	disable_netrw = true,
 	hijack_netrw = true,
@@ -19,7 +23,7 @@ return {
 		preserve_window_proportions = true,
 	},
 	git = {
-		enable = false,
+		enable = true,
 		ignore = true,
 	},
 	filesystem_watchers = {
@@ -32,42 +36,39 @@ return {
 	},
 	renderer = {
 		root_folder_label = false,
-		highlight_git = false,
+		highlight_git = true,
 		highlight_opened_files = "none",
-
 		indent_markers = {
-			enable = false,
+			enable = true,
 		},
-
 		icons = {
 			show = {
 				file = true,
 				folder = true,
 				folder_arrow = true,
-				git = false,
+				git = true,
 			},
-
 			glyphs = {
-				default = "󰈚",
-				symlink = "",
+				default = "󰈚 ",
+				symlink = " ",
 				folder = {
-					default = "",
-					empty = "",
-					empty_open = "",
-					open = "",
-					symlink = "",
-					symlink_open = "",
-					arrow_open = "",
-					arrow_closed = "",
+					default = " ",
+					empty = " ",
+					empty_open = " ",
+					open = " ",
+					symlink = " ",
+					symlink_open = " ",
+					arrow_open = " ",
+					arrow_closed = " ",
 				},
 				git = {
 					unstaged = "✗",
 					staged = "✓",
 					unmerged = "",
 					renamed = "➜",
-					untracked = "★",
+					untracked = "󱀶",
 					deleted = "",
-					ignored = "◌",
+					ignored = "",
 				},
 			},
 		},
