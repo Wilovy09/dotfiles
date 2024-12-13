@@ -63,8 +63,8 @@ in {
         remove_trailing_whitespace_on_save = true;
       };
       Nix = {
-			  language_servers = [ "nixd" "!nil" ];
-		  };
+        language_servers = ["nixd" "!nil"];
+      };
     };
     lsp = {
       "rust-analyzer" = {
@@ -99,12 +99,12 @@ in {
         };
       };
       nixd = {
-			  settings = {
-				  diagnostic = {
-					  suppress = [ "sema-extra-with" ];
-				  };
-			  };
-		  };
+        settings = {
+          diagnostic = {
+            suppress = ["sema-extra-with"];
+          };
+        };
+      };
       discord_presence = {
         initialization_options = {
           base_icons_url = "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/";

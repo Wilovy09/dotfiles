@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./theme.nix
   ];
@@ -10,7 +14,7 @@
 
   programs.helix = {
     enable = false;
-    ignores = [ "!.**" "!.github/" "!.gitignore" "!.gitattributes" "node_modules/" ];
+    ignores = ["!.**" "!.github/" "!.gitignore" "!.gitattributes" "node_modules/"];
     settings = {
       theme = "gruvbox";
       editor = {
@@ -20,8 +24,8 @@
         color-modes = true;
         scroll-lines = 3;
         scrolloff = 0;
-        rulers = [ 80 ];
-        gutters = [ "diff" "diagnostics" "line-numbers" "spacer" ];
+        rulers = [80];
+        gutters = ["diff" "diagnostics" "line-numbers" "spacer"];
         cursor-shape = {
           insert = "bar";
           normal = "block";
@@ -37,9 +41,9 @@
           skip-levels = 1;
         };
         statusline = {
-          left = [ "mode" "spinner" "spacer" "version-control" ];
-          center = [ "file-name" ];
-          right = [ "diagnostics" "file-type" "position" ];
+          left = ["mode" "spinner" "spacer" "version-control"];
+          center = ["file-name"];
+          right = ["diagnostics" "file-type" "position"];
           separator = "│";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
@@ -57,13 +61,13 @@
       };
       keys.normal = {
         "C-s" = ":write!";
-        "C-g" = [ ":new" ":insert-output lazygit" ":buffer-close!" ":redraw" ];
+        "C-g" = [":new" ":insert-output lazygit" ":buffer-close!" ":redraw"];
         "C-v" = ":vsplit-new";
         "C-h" = ":hsplit-new";
         "S-q" = ":quit";
         "A-tab" = ":buffer-next";
         "S-tab" = ":buffer-previous";
-        "C-f" = [ ":new" ":insert-output pwd | xplr" ":buffer-close!" ":redraw" ];
+        "C-f" = [":new" ":insert-output pwd | xplr" ":buffer-close!" ":redraw"];
         "y" = ":clipboard-yank-join";
 
         "esc" = {

@@ -35,18 +35,18 @@
   environment.systemPackages = with pkgs; [
     # NIX
     nil
-    # alejandra
-    nixd # nix lsp
+    alejandra
+    nixd
     nixpkgs-fmt
     nix-prefetch
     nix-prefetch-git
-    
+
     # C/C++
     cmake
     gcc_multi
     gnumake
     gccgo14
-    
+
     # GIT
     git
     gh
@@ -58,7 +58,6 @@
 
     # SCREEN MANAGEMEN
     arandr
-
 
     # NODE
     fnm
@@ -99,29 +98,29 @@
     dconf
     pavucontrol
     pkg-config
-    ripgrep                     # grep²
+    ripgrep
     xdg-utils
     psmisc
     xclip
-    lsof                        # view ports
-    fastfetch                   # see pc specs
+    lsof
+    fastfetch
     gruvbox-plus-icons
-    fzf                         # GOD
-    lazydocker                  # like docker desktop, but in terminal
-    lazysql                     # DBs clients
-    redis                       # 
-    flameshot                   # screenshots
-    obsidian                    # notes
-    lxappearance                # styles
-    btop                        # task manager
-    rustup                      # rust
-    onefetch                    # see github project stats
-    obs-studio                  # to record screen
-    thunderbird                 # email client
-    omnisharp-roslyn            # C#
-    ngrok                       # tunnels
-    bloomrpc                    # gRPC gui client
-    scrcpy                      # to share phone screen
+    fzf
+    lazydocker
+    lazysql
+    redis
+    flameshot
+    obsidian
+    lxappearance
+    btop
+    rustup
+    onefetch
+    obs-studio
+    thunderbird
+    omnisharp-roslyn
+    ngrok
+    bloomrpc
+    scrcpy
   ];
 
   # DOCKER

@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
-let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   gruvboxTheme = {
     fg = "#ebdbb2";
     bg = "#282828";
@@ -24,5 +27,3 @@ in {
     };
   };
 }
-
-

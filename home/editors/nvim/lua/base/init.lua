@@ -15,7 +15,6 @@ map("n", "<C-Esc>", ":q!<CR>", { noremap = true, silent = true })
 map("n", "<C-h>", ":NvimTreeFindFileToggle<CR>", { noremap = true, silent = true })
 map("n", "<S-f>", "zfa}", { noremap = true, silent = true })
 map("n", "<leader>h", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
---map("n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
 -- Cargar plugins
 require("base.plugins.lazy")

@@ -51,7 +51,7 @@
         $env.config = ${conf};
         load-env (${pkgs.fnm}/bin/fnm env --shell bash
           | lines
-          | str replace 'export ' "" 
+          | str replace 'export ' ""
           | str replace -a '"' ""
           | split column '='
           | rename name value

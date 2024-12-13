@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services.displayManager.sddm = {
     enable = true;
     theme = "catppuccin-mocha";
@@ -9,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     (catppuccin-sddm.override {
       flavor = "mocha";
-      font  = "Noto Sans";
+      font = "Noto Sans";
       fontSize = "9";
       background = "${../templo.png}";
       loginBackground = true;

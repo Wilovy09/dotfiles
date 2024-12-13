@@ -1,10 +1,9 @@
-{ ... }:
-{
+{...}: {
   services.picom = {
-    enable  = true;
-    fade    = true;
+    enable = true;
+    fade = true;
     backend = "glx";
-    shadow  = true;
+    shadow = true;
 
     opacityRules = [
       "85:class_g = 'Code'"
@@ -17,9 +16,9 @@
 
     settings = {
       blur = {
-        method           = "dual_kawase";
-        strength         = 1;
-        background       = false;
+        method = "dual_kawase";
+        strength = 1;
+        background = false;
         background-frame = false;
         background-fixed = false;
       };

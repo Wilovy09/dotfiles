@@ -62,6 +62,7 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
+
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 })
@@ -87,7 +88,12 @@ lspconfig.emmet_language_server.setup({
 lspconfig.pyright.setup({
 	capabilities = capabilities,
 })
+--[[
 lspconfig.nil_ls.setup({
+	capabilities = capabilities,
+})
+]]--
+lspconfig.nixd.setup({
 	capabilities = capabilities,
 })
 lspconfig.omnisharp.setup({

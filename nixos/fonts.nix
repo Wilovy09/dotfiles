@@ -1,5 +1,9 @@
-{ conf, lib, pkgs, ... }:
 {
+  conf,
+  lib,
+  pkgs,
+  ...
+}: {
   fonts = {
     enableDefaultPackages = true;
     fontconfig = {
