@@ -14,7 +14,7 @@
     home-manager,
     ...
   }: let
-    overlay = import ./pkgs;
+    overlay = import ./modules/pkgs;
   in {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
@@ -25,7 +25,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.wilovy = import ./home.nix;
+            home-manager.users.wilovy = import ./configurations/user/home.nix;
             home-manager.backupFileExtension = "hm-backup";
           }
           {

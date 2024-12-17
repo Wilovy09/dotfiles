@@ -1,14 +1,14 @@
 {pkgs, ...}: {
   imports = [
-    ./hardware-configuration.nix
-    ./nixos/boot/boot.nix
-    ./nixos/fonts.nix
-    ./nixos/sddm.nix
-    ./nixos/vscode.nix
-    ./nixos/zsh.nix
-    ./nixos/services.nix
-    ./nixos/programs.nix
-    ./nixos/portals.nix
+    ./configurations/hardware/hardware-configuration.nix
+    ./configurations/boot/boot.nix
+    ./configurations/user/fonts.nix
+    ./modules/tools/sddm
+    ./modules/editors/vscode
+    ./modules/services/zsh.nix
+    ./configurations/system/services.nix
+    ./configurations/system/programs.nix
+    ./modules/services/portals.nix
   ];
 
   networking.hostName = "nixos";
@@ -18,7 +18,16 @@
 
   environment.variables.BROWSER = "/run/current-system/sw/bin/brave";
 
-  hardware.pulseaudio.enable = true;
+  hardware = {
+    pulseaudio = {
+      enable = true;
+    };
+
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
+  };
 
   users.users.wilovy = {
     isNormalUser = true;
@@ -121,6 +130,7 @@
     ngrok
     bloomrpc
     scrcpy
+    deadd-notification-center
   ];
 
   # DOCKER
