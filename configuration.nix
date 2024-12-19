@@ -131,6 +131,7 @@
     bloomrpc
     scrcpy
     deadd-notification-center
+    glow # Render MD in terminal
   ];
 
   # DOCKER
