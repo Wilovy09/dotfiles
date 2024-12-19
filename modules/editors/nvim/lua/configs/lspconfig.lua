@@ -88,15 +88,13 @@ lspconfig.emmet_language_server.setup({
 lspconfig.pyright.setup({
 	capabilities = capabilities,
 })
---[[
-lspconfig.nil_ls.setup({
-	capabilities = capabilities,
-})
-]]--
 lspconfig.nixd.setup({
 	capabilities = capabilities,
 })
 lspconfig.omnisharp.setup({
 	capabilities = capabilities,
-  cmd = { "OmniSharp", "-lsp" },
+	cmd = { "OmniSharp", "-lsp" },
+})
+lspconfig.emmet_language_server.setup({
+	capabilities = capabilities,
 })

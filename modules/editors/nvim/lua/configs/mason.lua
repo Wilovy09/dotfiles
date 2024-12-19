@@ -14,6 +14,7 @@ return {
     "nil",
     "omnisharp",
     "chsarpier",
+    "emmet-language-server",
 	},
 
 	max_concurrent_installers = 10,
