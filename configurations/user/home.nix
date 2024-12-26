@@ -7,6 +7,7 @@
     ../../modules/editors/nvim
     ./starship_themes/my_prompt.nix
     ../../modules/editors/zed
+    ../../modules/services/nushell.nix
   ];
 
   home.username = "wilovy";

@@ -1,0 +1,163 @@
+// https://github.com/Wilovy09/dotfiles
+//
+//      ██╗    ██╗██╗██╗      ██████╗ ██╗   ██╗██╗   ██╗
+//      ██║    ██║██║██║     ██╔═══██╗██║   ██║╚██╗ ██╔╝
+//      ██║ █╗ ██║██║██║     ██║   ██║██║   ██║ ╚████╔╝ 
+//      ██║███╗██║██║██║     ██║   ██║╚██╗ ██╔╝  ╚██╔╝  
+//      ╚███╔███╔╝██║███████╗╚██████╔╝ ╚████╔╝    ██║   
+//       ╚══╝╚══╝ ╚═╝╚══════╝ ╚═════╝   ╚═══╝     ╚═╝   
+//                     LeftWM Config
+ 
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+(
+    modkey: "Mod4",
+    mousekey: "Mod4",
+    workspaces: [],
+    tags: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+    ],
+    max_window_width: None,
+    layouts: [
+        "MainAndVertStack",           // |===
+        "MainAndDeck",                // ||
+        "Monocle",                    // o
+        "MainAndHorizontalStack",     // |o
+    ],
+    layout_definitions: [
+      (
+        name: "Monocle", 
+        flip: None, 
+        rotate: North, 
+        reserve: None, 
+        columns: (
+          flip: None, 
+          rotate: North, 
+          main: None, 
+          stack: (
+            flip: None, 
+            rotate: North, 
+            split: None
+          ), 
+          second_stack: None
+        )
+      ),
+      (
+        name: "MainAndVertStack", 
+        flip: None, 
+        rotate: North, 
+        reserve: None, 
+        columns: (
+          flip: None, 
+          rotate: North, 
+          main: (
+            count: 1, 
+            size: 0.5, 
+            flip: None, 
+            rotate: North, 
+            split: Vertical
+          ), 
+          stack: (
+            flip: None, 
+            rotate: North, 
+            split: Horizontal
+          ), 
+          second_stack: None
+        )
+      ),
+      (
+        name: "MainAndDeck", 
+        flip: None, 
+        rotate: North, 
+        reserve: None, 
+        columns: (
+          flip: None, 
+          rotate: North, 
+          main: (
+            count: 1, 
+            size: 0.5, 
+            flip: None, 
+            rotate: North, 
+            split: None
+          ), 
+          stack: (
+            flip: None, 
+            rotate: North, 
+            split: None
+          ), 
+          second_stack: None
+        )
+      ),
+    (name: "MainAndHorizontalStack", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: (count: 1, size: 0.5, flip: None, rotate: North, split: Vertical), stack: (flip: None, rotate: North, split: Vertical), second_stack: None)),
+    ],
+    layout_mode: Tag,
+    insert_behavior: Bottom,
+    scratchpad: [],
+    window_rules: [
+    ( window_title: "Mozilla Firefox", spawn_floating: false ),
+  ],
+    disable_current_tag_swap: false,
+    disable_tile_drag: false,
+    disable_window_snap: true,
+    focus_behaviour: Sloppy,
+    focus_new_windows: true,
+    single_window_border: true,
+    sloppy_mouse_follows_focus: true,
+    create_follows_cursor: None,
+    auto_derive_workspaces: true,
+    disable_cursor_reposition_on_resize: false,
+    keybind: [
+        // Open menu
+        (command: Execute, value: "rofi -show drun", modifier: ["modkey"], key: "space"),
+        // Terminal
+        (command: Execute, value: "kitty", modifier: ["modkey"], key: "q"),
+        // Firefox
+        (command: Execute, value: "brave", modifier: ["modkey"], key: "w"),
+        // Open Polybar
+        (command: Execute, value: "polybar &", modifier: ["Alt"], key: "w"),
+        // Close Polybar
+        (command: Execute, value: "pkill polybar", modifier: ["Alt"], key: "q"),
+        // Show Windows
+        (command: Execute, value: "rofi -show window", modifier: ["Alt"], key: "Tab"),
+        // ScreenShot
+        (command: Execute, value: "flameshot gui", modifier: ["Alt"], key: "s"),
+        // Close Window
+        (command: CloseWindow, value: "", modifier: ["Alt"], key: "F4"),
+        // Soft Reload
+        (command: SoftReload, value: "", modifier: ["modkey", "Shift"], key: "r"),
+        // Toggle Full Screen 
+        (command: ToggleFullScreen, value: "", modifier: [""], key: "F11"),
+        // Increase Main Width
+        (command: IncreaseMainWidth, value: "3", modifier: ["modkey", "Shift"], key: "w"),
+        // Decrease Main Width
+        (command: DecreaseMainWidth, value: "3", modifier: ["modkey", "Shift"], key: "n"),
+
+        // Defaults
+        (command: MoveWindowUp, value: "", modifier: ["modkey", "Shift"], key: "k"),
+        (command: MoveWindowDown, value: "", modifier: ["modkey", "Shift"], key: "j"),
+        (command: MoveWindowTop, value: "", modifier: ["modkey"], key: "Return"),
+        (command: FocusWindowUp, value: "", modifier: ["modkey"], key: "k"),
+        (command: FocusWindowDown, value: "", modifier: ["modkey"], key: "j"),
+        (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "k"),
+        (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "j"),
+
+        // Go to
+        (command: GotoTag, value: "1", modifier: ["modkey"], key: "1"),
+        (command: GotoTag, value: "2", modifier: ["modkey"], key: "2"),
+        (command: GotoTag, value: "3", modifier: ["modkey"], key: "3"),
+        (command: GotoTag, value: "4", modifier: ["modkey"], key: "4"),
+        (command: GotoTag, value: "5", modifier: ["modkey"], key: "5"),
+
+        // Move to
+        (command: MoveToTag, value: "1", modifier: ["modkey", "Shift"], key: "1"),
+        (command: MoveToTag, value: "2", modifier: ["modkey", "Shift"], key: "2"),
+        (command: MoveToTag, value: "3", modifier: ["modkey", "Shift"], key: "3"),
+        (command: MoveToTag, value: "4", modifier: ["modkey", "Shift"], key: "4"),
+        (command: MoveToTag, value: "5", modifier: ["modkey", "Shift"], key: "5"),
+    ],
+    state_path: None,
+)

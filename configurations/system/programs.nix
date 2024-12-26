@@ -7,11 +7,11 @@
         extraArgs = "--keep-since 7d";
       };
     };
-    firefox = {
-      enable = true;
-      package = pkgs.firefox;
-      nativeMessagingHosts.packages = [pkgs.firefoxpwa];
-    };
+    # firefox = {
+    #   enable = true;
+    #   package = pkgs.firefox;
+    #   nativeMessagingHosts.packages = [pkgs.firefoxpwa];
+    # };
     neovim = {
       enable = true;
     };
