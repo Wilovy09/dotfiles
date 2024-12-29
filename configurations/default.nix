@@ -1,24 +1,22 @@
-{ config, lib, pkgs, ... }:
-{
-  imports =
-    [
-      ./nix
-      ./boot
-      ./core
-      ./basics
-    ];
+{pkgs, ...}: {
+  imports = [
+    ./nix
+    ./boot
+    ./core
+    ./basics
+  ];
 
   system.stateVersion = "24.11";
 
-  services.xserver.enable = true;
-
-  # ~~~ DESKTOP ~~~
   services.xserver.windowManager.leftwm.enable = true;
-  # ~~~~~~~~~~~~~~~
 
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      variant = "altgr-intl";
+    };
+  };
 
   services.printing.enable = true;
 
@@ -32,11 +30,10 @@
   programs.zsh.enable = true;
   users.users.wilovy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "docker" "redis" "adbusers" "networkmanager" ];
-    packages = with pkgs; [];
-    shell = pkgs.zsh; 
+    extraGroups = ["wheel" "video" "audio" "docker" "redis" "adbusers" "networkmanager"];
+    shell = pkgs.zsh;
   };
-
+  services.xserver.excludePackages = with pkgs; [xterm];
 
   environment.systemPackages = with pkgs; [
     gh

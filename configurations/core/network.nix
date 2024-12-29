@@ -4,4 +4,3 @@
   time.timeZone = "America/Monterrey";
   i18n.defaultLocale = "en_US.UTF-8";
 }
-
