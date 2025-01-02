@@ -2,9 +2,9 @@
 return {
 	ensure_installed = {
     -- Install lua-language-server from pkgs of nix
+		-- "rust-analyzer",
+		-- "rustfmt",
 		"stylua",
-		"rust-analyzer",
-		"rustfmt",
 		"prettier",
 		"typescript-language-server",
 		"vue-language-server",

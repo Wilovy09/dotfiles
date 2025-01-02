@@ -117,9 +117,11 @@
         (command: Execute, value: "kitty", modifier: ["modkey"], key: "q"),
         // Firefox
         (command: Execute, value: "brave", modifier: ["modkey"], key: "w"),
+
         // Open Polybar
-        (command: Execute, value: "polybar &", modifier: ["Alt"], key: "w"),
+        (command: Execute, value: "$HOME/.config/leftwm/themes/current/scripts/openpolybar.sh", modifier: ["Alt"], key: "w"),
         // Close Polybar
+
         (command: Execute, value: "pkill polybar", modifier: ["Alt"], key: "q"),
         // Show Windows
         (command: Execute, value: "rofi -show window", modifier: ["Alt"], key: "Tab"),

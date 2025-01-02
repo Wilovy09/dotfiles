@@ -15,9 +15,6 @@
   home.sessionVariables = {};
 
   home.packages = with pkgs; [
-    # LSP
-    lua-language-server
-
     # NIX
     nil
     alejandra
@@ -58,12 +55,14 @@
     # Bar
     polybar
     rofi
+    eww
 
     # Screenshot
     flameshot
 
     # Social
     discord
+    spotify
 
     # Backgrounds
     feh
@@ -72,6 +71,9 @@
     unzip
     ouch
 
+    arandr
+    xorg.xrandr
+    
     # MISC
     gvfs
     dconf
@@ -90,7 +92,6 @@
     obsidian
     lxappearance
     btop
-    rustup
     onefetch
     obs-studio
     omnisharp-roslyn
