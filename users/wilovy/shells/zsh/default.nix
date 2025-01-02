@@ -19,6 +19,7 @@
     "$HOME/.local/bin"
     "$HOME/go/bin"
     "$HOME/.cargo/bin"
+    "$HOME/.volta/bin"
   ];
 
   programs.zsh = {

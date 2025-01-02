@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   environment.variables.FLAKE = "/home/wilovy/wilovy.nix";
@@ -8,5 +8,10 @@
       enable = true;
       extraArgs = "--keep-since 7d";
     };
+  };
+  # Run unpatched dynamic binaries on NixOS.
+  programs.nix-ld = {
+    enable = true;
+    package = pkgs.nix-ld-rs;
   };
 }
