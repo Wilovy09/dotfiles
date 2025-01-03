@@ -41,8 +41,8 @@
 
     # NODE
     #fnm
-    #nodejs_22
-    volta
+    nodejs_22
+    #volta
 
     # Browser
     brave
