@@ -135,7 +135,7 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^5", -- Recommended
-    lazy = false, -- This plugin is already lazy
+    lazy = false,   -- This plugin is already lazy
   },
   -- CodeActions
   {
@@ -146,5 +146,12 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
+  },
+  -- Cord nvim
+  {
+    "vyfor/cord.nvim",
+    build = "./build || .\\build",
+    event = "VeryLazy",
+    opts = {},
   },
 }
