@@ -5,6 +5,7 @@
     ./shells
     ./desktop
     ./editors
+    ./ssh
   ];
 
   home.username = "wilovy";
