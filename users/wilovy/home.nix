@@ -16,6 +16,8 @@
   home.sessionVariables = {};
 
   home.packages = with pkgs; [
+    prismlauncher
+
     # NIX
     nil
     alejandra
@@ -76,6 +78,9 @@
     arandr
     xorg.xrandr
     
+    # SDDM
+    sddm-wilovy-theme
+
     # MISC
     gvfs
     dconf

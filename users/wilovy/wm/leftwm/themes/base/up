@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-feh --bg-scale ~/wilovy.nix/Backgrounds/woman_gruvbox.jpg
+feh --bg-scale ~/wilovy.nix/Backgrounds/woman_gruvbox_activate.jpg
 picom &
 deadd-notification-center &
 
