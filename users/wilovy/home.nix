@@ -49,6 +49,7 @@
 
     # Browser
     brave
+    firefox
 
     # File manager
     xplr

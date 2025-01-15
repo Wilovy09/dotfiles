@@ -2,9 +2,9 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
-      Host rb3b
+      Host rpi
         HostName 192.168.1.15
-        User wilovy
+        User admin
     '';
   };
 }
