@@ -158,4 +158,6 @@ return {
   },
   -- DiffView
   require("configs.diffview"),
+  -- Dadbod
+  require("configs.dadbod"),
 }

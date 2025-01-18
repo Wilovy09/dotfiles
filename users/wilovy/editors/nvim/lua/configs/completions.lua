@@ -152,6 +152,12 @@ return {
     end,
     config = function(_, opts)
       local cmp = require("cmp")
+      cmp.setup.filetype({ "sql" }, {
+        sources = {
+          { name = "vim-dadbod-completion" },
+          { name = "buffer" },
+        },
+      })
       require("luasnip.loaders.from_vscode").lazy_load()
 
       vim.api.nvim_set_hl(0, "CmpSel", { bg = "#373432", fg = "#ffffff", bold = true })
