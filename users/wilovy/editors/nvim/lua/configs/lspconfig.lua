@@ -1,10 +1,26 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-vim.keymap.set("n", "<space>d", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#373432]]
+vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#373432]]
+
+local border = {
+  { "╭", "FloatBorder" },
+  { "─", "FloatBorder" },
+  { "╮", "FloatBorder" },
+  { "│", "FloatBorder" },
+  { "╯", "FloatBorder" },
+  { "─", "FloatBorder" },
+  { "╰", "FloatBorder" },
+  { "│", "FloatBorder" },
+}
+
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = opts.border or border
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -16,7 +32,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
     vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set("n", "<space>wl", function()
@@ -32,7 +47,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- https://github.com/williamboman/mason-lspconfig.nvim
+-- Configuración de servidores LSP
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
   settings = {
@@ -43,11 +58,9 @@ lspconfig.lua_ls.setup({
           [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
           [vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy"] = true,
         },
-
         maxPreload = 100000,
         preloadFileSize = 10000,
       },
-
       runtime = {
         version = "LuaJIT",
         path = vim.split(package.path, ";"),
@@ -63,32 +76,13 @@ lspconfig.lua_ls.setup({
   },
 })
 
-lspconfig.ts_ls.setup({
-  capabilities = capabilities,
-})
-lspconfig.volar.setup({
-  capabilities = capabilities,
-  cmd = { "vue-language-server", "--stdio" },
-})
-lspconfig.astro.setup({
-  capabilities = capabilities,
-})
-lspconfig.eslint.setup({
-  capabilities = capabilities,
-})
-lspconfig.tailwindcss.setup({
-  capabilities = capabilities,
-})
-lspconfig.pyright.setup({
-  capabilities = capabilities,
-})
-lspconfig.nixd.setup({
-  capabilities = capabilities,
-})
-lspconfig.omnisharp.setup({
-  capabilities = capabilities,
-  cmd = { "OmniSharp", "-lsp" },
-})
-lspconfig.emmet_language_server.setup({
-  capabilities = capabilities,
-})
+lspconfig.ts_ls.setup({ capabilities = capabilities })
+lspconfig.volar.setup({ capabilities = capabilities, cmd = { "vue-language-server", "--stdio" } })
+lspconfig.astro.setup({ capabilities = capabilities })
+lspconfig.eslint.setup({ capabilities = capabilities })
+lspconfig.tailwindcss.setup({ capabilities = capabilities })
+lspconfig.pyright.setup({ capabilities = capabilities })
+lspconfig.nixd.setup({ capabilities = capabilities })
+lspconfig.omnisharp.setup({ capabilities = capabilities, cmd = { "OmniSharp", "-lsp" } })
+lspconfig.emmet_language_server.setup({ capabilities = capabilities })
+

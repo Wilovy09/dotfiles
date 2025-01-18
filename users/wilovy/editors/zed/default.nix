@@ -98,7 +98,7 @@ in {
       };
       omnisharp = {
         binary = {
-          path = "/run/current-system/sw/bin/OmniSharp";
+          path = "/etc/profiles/per-user/wilovy/bin/OmniSharp";
           arguments = ["-lsp"];
         };
       };

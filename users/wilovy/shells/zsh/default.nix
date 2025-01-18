@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   home.shellAliases = {
@@ -13,6 +17,7 @@
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     ZSH = "${pkgs.oh-my-zsh}/share/oh-my-zsh/oh-my-zsh.sh";
+    EDITOR = "${config.programs.neovim.package}/bin/nvim";
   };
 
   home.sessionPath = [

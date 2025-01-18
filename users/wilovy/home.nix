@@ -52,7 +52,8 @@
     firefox
 
     # File manager
-    xplr
+    yazi
+    # xplr
 
     # Clipboard
     xclip

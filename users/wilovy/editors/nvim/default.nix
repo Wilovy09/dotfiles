@@ -10,5 +10,7 @@
     lua-language-server
     rust-analyzer
     rustfmt
+    omnisharp-roslyn
+    csharpier
   ];
 }

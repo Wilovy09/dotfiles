@@ -21,21 +21,23 @@ return {
       require("lualine").setup(opts)
     end,
   },
+  -- Yazi
+  require("configs.yazi"),
   -- NVimTree
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = function()
-      return require("configs.nvimtree")
-    end,
-    config = function(_, opts)
-      require("nvim-tree").setup(opts)
-    end,
-  },
+  --  {
+  --    "nvim-tree/nvim-tree.lua",
+  --    version = "*",
+  --    lazy = false,
+  --    dependencies = {
+  --      "nvim-tree/nvim-web-devicons",
+  --    },
+  --    opts = function()
+  --      return require("configs.nvimtree")
+  --    end,
+  --    config = function(_, opts)
+  --      require("nvim-tree").setup(opts)
+  --    end,
+  --  },
   -- TreeSitter
   {
     "nvim-treesitter/nvim-treesitter",
@@ -154,4 +156,6 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  -- DiffView
+  require("configs.diffview"),
 }

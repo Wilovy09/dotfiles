@@ -62,6 +62,11 @@
         style = "fg:#F4993A";
         format = "[$symbol$version ]($style)";
       };
+      dotnet = {
+        symbol = "🟣";
+        style = "fg:#4e29ce";
+        format = "[$symbol$version ]($style)";
+      };
     };
   };
 }

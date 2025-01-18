@@ -1,9 +1,11 @@
 -- https://mason-registry.dev/registry/list
 return {
 	ensure_installed = {
-    -- Install lua-language-server from pkgs of nix
+    -- Install from pkgs of nix
+    -- lua-language-server
 		-- "rust-analyzer",
 		-- "rustfmt",
+    -- "csharpier",
 		"stylua",
 		"prettier",
 		"typescript-language-server",
@@ -13,7 +15,6 @@ return {
     "tailwindcss-language-server",
     "nil",
     "omnisharp",
-    "chsarpier",
     "emmet-language-server",
 	},
 
