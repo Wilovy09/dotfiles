@@ -1,6 +1,15 @@
-local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+require('configs.lspconfigs.lua_ls')
+require('configs.lspconfigs.ts_ls')
+require('configs.lspconfigs.volar_ls')
+require('configs.lspconfigs.astro_ls')
+require('configs.lspconfigs.eslint_ls')
+require('configs.lspconfigs.tailwindcss_ls')
+require('configs.lspconfigs.pyright_ls')
+require('configs.lspconfigs.nixd_ls')
+require('configs.lspconfigs.omnisharp_ls')
+require('configs.lspconfigs.emmet_ls')
 
+-- Configuración global y común
 vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#373432]]
 vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#373432]]
 
@@ -46,43 +55,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
-
--- Configuración de servidores LSP
-lspconfig.lua_ls.setup({
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      workspace = {
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-          [vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy"] = true,
-        },
-        maxPreload = 100000,
-        preloadFileSize = 10000,
-      },
-      runtime = {
-        version = "LuaJIT",
-        path = vim.split(package.path, ";"),
-      },
-      diagnostics = {
-        enable = true,
-        globals = { "vim" },
-      },
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-})
-
-lspconfig.ts_ls.setup({ capabilities = capabilities })
-lspconfig.volar.setup({ capabilities = capabilities, cmd = { "vue-language-server", "--stdio" } })
-lspconfig.astro.setup({ capabilities = capabilities })
-lspconfig.eslint.setup({ capabilities = capabilities })
-lspconfig.tailwindcss.setup({ capabilities = capabilities })
-lspconfig.pyright.setup({ capabilities = capabilities })
-lspconfig.nixd.setup({ capabilities = capabilities })
-lspconfig.omnisharp.setup({ capabilities = capabilities, cmd = { "OmniSharp", "-lsp" } })
-lspconfig.emmet_language_server.setup({ capabilities = capabilities })
-
