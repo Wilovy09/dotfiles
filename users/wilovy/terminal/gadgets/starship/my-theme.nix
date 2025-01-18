@@ -4,7 +4,7 @@
     settings = {
       add_newline = false;
       format = ''
-        (($git_branch) ($nodejs)($rust)($python)($git_status))($nix_shell)$directory$character
+        (($git_branch) ($nodejs)($rust)($python)($git_status))($nix_shell)$directory$cmd_duration$character
       '';
       directory = {
         format = "[󰉋 ](fg:#D8A657 bg:none)[$path ](fg:#D8A657 bg:none)";
@@ -32,6 +32,12 @@
         staged = "✅$\{count\} ";
         renamed = "🚚$\{count\} ";
         deleted = "🗑️$\{count\} ";
+      };
+      cmd_duration = {
+        min_time = 01;
+        format = "[$duration](bold yellow) ";
+        style = "bold yellow";
+        show_milliseconds = true;
       };
       character = {
         success_symbol = "[󱐋](bold yellow)";
