@@ -10,26 +10,40 @@ require('configs.lspconfigs.omnisharp_ls')
 require('configs.lspconfigs.emmet_ls')
 
 -- Configuración global y común
-vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#373432]]
-vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#373432]]
-
-local border = {
-  { "╭", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "╮", "FloatBorder" },
-  { "│", "FloatBorder" },
-  { "╯", "FloatBorder" },
-  { "─", "FloatBorder" },
-  { "╰", "FloatBorder" },
-  { "│", "FloatBorder" },
+require('base.utils').set_highlights{
+  NormalFloat = { bg = "NONE" },
+  FloatBorder = { fg = "white", bg = "NONE" },
 }
 
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  opts.border = opts.border or border
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
+local hl_name = "FloatBorder"
+local border = {
+  { "╭", hl_name },
+  { "─", hl_name },
+  { "╮", hl_name },
+  { "│", hl_name },
+  { "╯", hl_name },
+  { "─", hl_name },
+  { "╰", hl_name },
+  { "│", hl_name },
+}
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = border,
+})
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = border,
+  focusable = false,
+  relative = "cursor",
+})
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  underline = true,
+  virtual_text = {
+    spacing = 5,
+    min = { severity = "Warning" },
+  },
+  update_in_insert = true,
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
