@@ -13,7 +13,9 @@
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
 
-  home.sessionVariables = {};
+  home.sessionVariables = {
+    SHELL = "nu";
+  };
 
   home.packages = with pkgs; [
     prismlauncher
@@ -36,6 +38,7 @@
 
     # Editors
     zed-editor
+    jetbrains.datagrip
 
     wget
 
@@ -44,7 +47,7 @@
 
     # NODE
     #fnm
-    nodejs_22
+    #nodejs_22
     #volta
 
     # Browser
@@ -82,6 +85,13 @@
     
     # SDDM
     sddm-wilovy-theme
+
+    zellij
+    nushellPlugins.gstat
+
+    # Bluetooth
+    bluetuith
+    bluetui
 
     # MISC
     gvfs

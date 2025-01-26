@@ -31,7 +31,7 @@
   users.users.wilovy = {
     isNormalUser = true;
     extraGroups = ["wheel" "video" "audio" "docker" "redis" "adbusers" "networkmanager"];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
   services.xserver.excludePackages = with pkgs; [xterm];
 

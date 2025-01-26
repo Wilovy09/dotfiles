@@ -1,5 +1,5 @@
 {
   imports = [
-    ./starship/my-theme.nix
+    # ./starship/my-theme.nix
   ];
 }
