@@ -21,5 +21,8 @@
     tailwindcss-language-server
     nil
     emmet-language-server
+    # Kulala deps
+    jq
+    libxml2
   ];
 }
