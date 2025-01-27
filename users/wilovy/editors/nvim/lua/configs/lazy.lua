@@ -150,12 +150,7 @@ return {
 		},
 	},
 	-- Cord nvim
-	{
-		"vyfor/cord.nvim",
-		build = "./build || .\\build",
-		event = "VeryLazy",
-		opts = {},
-	},
+  require("configs.cord"),
 	-- DiffView
 	require("configs.diffview"),
 	-- Dadbod
@@ -168,4 +163,6 @@ return {
 	require("configs.statuscol"),
   -- Trouble
   require("configs.trouble"),
+  -- Alpha
+  require("configs.alpha"),
 }
