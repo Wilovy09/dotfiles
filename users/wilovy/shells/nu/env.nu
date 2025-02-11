@@ -1,15 +1,10 @@
 source ./prompt.nu
 
-# Set the prompt to use the custom function
-$env.PROMPT_COMMAND = {|| prompt }
-$env.PROMPT_COMMAND_RIGHT = ""
-
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
-$env.PROMPT_INDICATOR = {|| prompt_status "" }
-$env.PROMPT_INDICATOR_VI_INSERT = {|| prompt_status "vi" }
-$env.PROMPT_INDICATOR_VI_NORMAL = {|| prompt_status "vn" }
-$env.PROMPT_MULTILINE_INDICATOR = {|| prompt_status "ml" }
+$env.PROMPT_INDICATOR_VI_INSERT = {|| prompt_status }
+$env.PROMPT_INDICATOR_VI_NORMAL = {|| prompt_status }
+$env.PROMPT_MULTILINE_INDICATOR = {|| prompt_status }
 
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
 

@@ -20,6 +20,7 @@ white) - %an%C(reset)'";
       nix-zellij = "nix develop -c zellij attach --create";
       icat = "kitten icat";
       zed = "zeditor";
+      ga = "git add";
     };
 
     environmentVariables = {

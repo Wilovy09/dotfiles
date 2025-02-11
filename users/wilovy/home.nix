@@ -93,6 +93,11 @@
     bluetuith
     bluetui
 
+    # Podman
+    podman-tui
+    podman-compose # ???
+    dive
+
     # MISC
     gvfs
     dconf
