@@ -8,6 +8,7 @@ require('configs.lspconfigs.pyright_ls')
 require('configs.lspconfigs.nixd_ls')
 require('configs.lspconfigs.omnisharp_ls')
 require('configs.lspconfigs.emmet_ls')
+require('configs.lspconfigs.deno_ls')
 
 -- Configuración global y común
 require('base.utils').set_highlights{

@@ -43,8 +43,8 @@ return {
     dashboard.section.buttons.val = {
       dashboard.button("e", "📝 New File", ":ene <BAR> startinsert<CR>"),
       dashboard.button("SPC f f", "🔍 Find File", ":Telescope find_files<CR>"),
-      dashboard.button("SPC f g", "🇼Find Word", ":Telescope live_grep<CR>"),
-      dashboard.button(" CTRL h", "🌳 NVIMTree", ":NvimTreeFindFileToggle<CR>"),
+      dashboard.button("SPC f g", "🇼 Find Word", ":Telescope live_grep<CR>"),
+      dashboard.button(" CTRL h", "🌳 Yazi", ":Yazi<CR>"),
     }
 
     local function footer()

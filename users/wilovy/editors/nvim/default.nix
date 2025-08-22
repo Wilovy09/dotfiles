@@ -17,6 +17,7 @@
     stylua
     prettierd
     typescript-language-server
+    deno
     eslint_d
     tailwindcss-language-server
     nil

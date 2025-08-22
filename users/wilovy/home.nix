@@ -18,7 +18,7 @@
   };
 
   home.packages = with pkgs; [
-    prismlauncher
+    zoxide
 
     # NIX
     nil
@@ -93,11 +93,6 @@
     bluetuith
     bluetui
 
-    # Podman
-    podman-tui
-    podman-compose # ???
-    dive
-
     # MISC
     gvfs
     dconf
@@ -122,6 +117,6 @@
     ngrok
     bloomrpc
     scrcpy
-    deadd-notification-center
+    # deadd-notification-center
   ];
 }
