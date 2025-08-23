@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{pkgs, ...}:{
   programs.neovim.enable = true;
 
   xdg.configFile = {
     "nvim/init.lua".source = ./init.lua;
     "nvim/lua".source = ./lua;
+    "nvim/.luarc.json".source = ./.luarc.json;
   };
 
   home.packages = with pkgs; [

@@ -14,7 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
-plugins = require("configs.lazy")
+plugins = require("configs.mod")
 
-require("configs.lazy").setup(plugins)
+require("lazy").setup(plugins)
 require("gruvbox").load()
