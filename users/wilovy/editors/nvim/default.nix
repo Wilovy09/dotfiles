@@ -9,22 +9,23 @@
 
   home.packages = with pkgs; [
     lua-language-server
+    stylua
+
+    nil
+    nixd
+
     rust-analyzer
     rustfmt
+
     omnisharp-roslyn
     csharpier
     vue-language-server
     astro-language-server
-    stylua
     prettierd
     typescript-language-server
     deno
     eslint_d
     tailwindcss-language-server
-    nil
     emmet-language-server
-    # Kulala deps
-    jq
-    libxml2
   ];
 }

@@ -19,6 +19,7 @@
       ns = "nh os switch --ask . -- --show-trace";
       zed = "zeditor";
       ga = "git add";
+      nsearch = "nix run github:nix-community/nix-index-database";
     };
 
     environmentVariables = {

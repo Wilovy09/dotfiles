@@ -1,0 +1,34 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+vim.lsp.config('lua_ls', {
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
+  root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+          [vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy"] = true,
+        },
+        maxPreload = 100000,
+        preloadFileSize = 10000,
+      },
+      runtime = {
+        version = "LuaJIT",
+        path = vim.split(package.path, ";"),
+      },
+      diagnostics = {
+        enable = true,
+        globals = { "vim" },
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
+
+vim.lsp.enable('lua_ls')

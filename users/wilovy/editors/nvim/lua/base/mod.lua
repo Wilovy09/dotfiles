@@ -32,4 +32,4 @@ map("x", "y", '"+y', { noremap = true, silent = true })   -- Modo visual-line
 -- Colors
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#c7ba99", bold = true })
 
-require("base.plugins.mod")
+require("base.lazy_config.mod")

@@ -38,7 +38,7 @@
 
     # Editors
     zed-editor
-    jetbrains.datagrip
+    # jetbrains.datagrip
 
     wget
 

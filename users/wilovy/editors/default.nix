@@ -2,6 +2,6 @@
   imports = [
     ./nvim
     ./zed
-    ./vscode
+    # ./vscode
   ];
 }
