@@ -84,7 +84,7 @@
     xorg.xrandr
     
     # SDDM
-    sddm-wilovy-theme
+    # sddm-wilovy-theme
 
     zellij
     nushellPlugins.gstat
