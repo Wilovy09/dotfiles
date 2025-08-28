@@ -38,7 +38,7 @@ return {
     -- Smear
     require("configs.plugins.smear"),
     -- Mason || LSPs
-    require("configs.plugins.mason"),
+    require("configs.plugins.lsp_config"),
     -- CMP
     require("configs.plugins.cmp")
 }

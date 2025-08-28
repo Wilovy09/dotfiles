@@ -1,4 +1,4 @@
-{pkgs, ...}:{
+{pkgs, ...}: {
   programs.neovim.enable = true;
 
   xdg.configFile = {
@@ -17,9 +17,10 @@
     rust-analyzer
     rustfmt
 
+    vtsls
+
     omnisharp-roslyn
     csharpier
-    vue-language-server
     astro-language-server
     prettierd
     typescript-language-server
