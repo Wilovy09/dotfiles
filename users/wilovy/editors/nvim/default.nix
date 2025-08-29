@@ -8,25 +8,32 @@
   };
 
   home.packages = with pkgs; [
+    # Lua
     lua-language-server
     stylua
 
+    # Nix
     nil
     nixd
 
+    # Rust
     rust-analyzer
     rustfmt
 
+    # Web / TS / Vue
     vtsls
-
-    omnisharp-roslyn
-    csharpier
+    vue-language-server
     astro-language-server
-    prettierd
-    typescript-language-server
-    deno
-    eslint_d
     tailwindcss-language-server
     emmet-language-server
+    deno
+
+    # Formatting / lint
+    prettierd
+    eslint_d
+
+    # CSharp
+    omnisharp-roslyn
+    csharpier
   ];
 }
